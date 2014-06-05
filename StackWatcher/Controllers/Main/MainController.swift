@@ -16,7 +16,7 @@ class MainController: UISplitViewController, UISplitViewControllerDelegate {
 		super.init(nibName: nil, bundle: nil)
 
 		self.delegate = self
-		self.detailController.navigationItem.leftBarButtonItem = self.displayModeButtonItem()
+		//self.detailController.navigationItem.leftBarButtonItem = self.displayModeButtonItem()
 		self.viewControllers = [ UINavigationController(rootViewController: masterController), UINavigationController(rootViewController: detailController) ]
 	}
 
