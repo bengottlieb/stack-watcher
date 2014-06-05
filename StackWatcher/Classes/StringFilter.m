@@ -25,7 +25,7 @@
 			NSString			*token = [self substringWithRange: NSMakeRange(amperRange.location, (semiRange.location - amperRange.location) + 1)];
 			
 			if ([token hasPrefix: @"&#"]) {
-				wchar_t				replacement = [[token substringFromIndex: 2] integerValue];
+				wchar_t				replacement = (wchar_t) [[token substringFromIndex: 2] integerValue];
 
 				[results appendFormat: @"%c", replacement];
 				start += (semiRange.location - amperRange.location);

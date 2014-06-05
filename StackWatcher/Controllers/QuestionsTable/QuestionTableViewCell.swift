@@ -13,6 +13,7 @@ class QuestionTableViewCell: UITableViewCell {
 		didSet {
 			//println("Question: \(question)")
 			self.titleLabel.text = self.question!.title
+			self.tagBubbles.tags = self.question!.tags
 			self.answerCountLabel.text = "\(self.question!.answer_count)"
 		}
 	}
@@ -26,6 +27,7 @@ class QuestionTableViewCell: UITableViewCell {
     }
 
 	
+	@IBOutlet var tagBubbles : TagBubbleView
 	@IBOutlet var titleLabel : UILabel
 	@IBOutlet var answerCountLabel : UILabel
 }

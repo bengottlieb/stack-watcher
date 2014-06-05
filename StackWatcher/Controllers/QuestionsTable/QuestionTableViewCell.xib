@@ -14,9 +14,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="264" translatesAutoresizingMaskIntoConstraints="NO" id="5ET-ul-Pre">
-                        <rect key="frame" x="50" y="1" width="264" height="65"/>
+                        <rect key="frame" x="50" y="1" width="264" height="46"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="65" id="aHb-aa-kwF"/>
+                            <constraint firstAttribute="height" constant="46" id="aHb-aa-kwF"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -32,23 +32,32 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="No3-br-Tvn" customClass="TagBubbleView" customModule="StackWatcher" customModuleProvider="target">
+                        <rect key="frame" x="50" y="43" width="264" height="23"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="5ET-ul-Pre" firstAttribute="leading" secondItem="zxf-IO-OIn" secondAttribute="trailing" constant="8" id="APL-3U-5Kt"/>
                     <constraint firstAttribute="trailing" secondItem="5ET-ul-Pre" secondAttribute="trailing" constant="6" id="Flf-cf-pWx"/>
                     <constraint firstItem="zxf-IO-OIn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="HXR-RQ-Ze0"/>
                     <constraint firstItem="5ET-ul-Pre" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="IOX-ym-CgA"/>
+                    <constraint firstAttribute="trailing" secondItem="No3-br-Tvn" secondAttribute="trailing" constant="6" id="JRX-oh-AiU"/>
+                    <constraint firstItem="No3-br-Tvn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="43" id="LvK-PL-l6L"/>
+                    <constraint firstItem="No3-br-Tvn" firstAttribute="leading" secondItem="zxf-IO-OIn" secondAttribute="trailing" constant="8" id="dsb-ay-1Lx"/>
                     <constraint firstItem="zxf-IO-OIn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="eUC-q6-Gak"/>
                     <constraint firstAttribute="centerY" secondItem="zxf-IO-OIn" secondAttribute="centerY" id="jz8-fD-aiM"/>
+                    <constraint firstAttribute="bottom" secondItem="No3-br-Tvn" secondAttribute="bottom" id="oUd-Ad-YU8"/>
                     <constraint firstItem="5ET-ul-Pre" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="wRo-Rf-4y1"/>
                 </constraints>
             </tableViewCellContentView>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
                 <outlet property="answerCountLabel" destination="zxf-IO-OIn" id="RCq-X8-F7P"/>
+                <outlet property="tagBubbles" destination="No3-br-Tvn" id="Yod-ud-IBx"/>
                 <outlet property="titleLabel" destination="5ET-ul-Pre" id="27r-cL-V9p"/>
             </connections>
-            <point key="canvasLocation" x="139" y="161.5"/>
+            <point key="canvasLocation" x="139" y="160.5"/>
         </tableViewCell>
     </objects>
 </document>

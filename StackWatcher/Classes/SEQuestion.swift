@@ -12,8 +12,10 @@ class SEQuestion : NSObject {
 
 	var title, link: String
 	var answer_count: Int;
+	var tags: String[]
 	
 	init(dictionary: NSDictionary) {
+		tags = dictionary["tags"] as String[]
 		title = (dictionary["title"] as NSString).filteredString()
 		link = dictionary["link"] as String
 		answer_count = dictionary["answer_count"] as Int

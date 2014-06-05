@@ -10,6 +10,7 @@
 		B527B639193FF53C004C1B4D /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527B637193FF53C004C1B4D /* QuestionTableViewCell.swift */; };
 		B527B63A193FF53C004C1B4D /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B527B638193FF53C004C1B4D /* QuestionTableViewCell.xib */; };
 		B58610C6194115A40001A639 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58610C5194115A40001A639 /* MainController.swift */; };
+		B58610C8194126570001A639 /* TagBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58610C7194126570001A639 /* TagBubbleView.swift */; };
 		B5AB2197193F6A4A00F49BC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AB2196193F6A4A00F49BC7 /* AppDelegate.swift */; };
 		B5AB219A193F6A4A00F49BC7 /* StackWatcher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5AB2198193F6A4A00F49BC7 /* StackWatcher.xcdatamodeld */; };
 		B5AB219C193F6A4A00F49BC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5AB219B193F6A4A00F49BC7 /* Images.xcassets */; };
@@ -41,6 +42,7 @@
 		B527B637193FF53C004C1B4D /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionTableViewCell.swift; path = StackWatcher/Controllers/QuestionsTable/QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		B527B638193FF53C004C1B4D /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionTableViewCell.xib; path = StackWatcher/Controllers/QuestionsTable/QuestionTableViewCell.xib; sourceTree = "<group>"; };
 		B58610C5194115A40001A639 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainController.swift; path = StackWatcher/Controllers/Main/MainController.swift; sourceTree = "<group>"; };
+		B58610C7194126570001A639 /* TagBubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagBubbleView.swift; path = StackWatcher/Views/TagBubbleView.swift; sourceTree = "<group>"; };
 		B5AB2191193F6A4A00F49BC7 /* StackWatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackWatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AB2195193F6A4A00F49BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5AB2196193F6A4A00F49BC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				B5BB6F5F193F94B40011AD08 /* MyPlayground.playground */,
 				B5DA3722194078CA009C97AD /* AlertManager.swift */,
 				B58610C5194115A40001A639 /* MainController.swift */,
+				B58610C7194126570001A639 /* TagBubbleView.swift */,
 				B5AB21B1193F6A5C00F49BC7 /* StackWatcher.swift */,
 				B5BB6F64193FB3E30011AD08 /* SEQuestion.swift */,
 				B5FBC76B1940E066009C5540 /* StringFilter.h */,
@@ -297,6 +300,7 @@
 				B5BB6F5D193F8EEF0011AD08 /* AuthorizationViewController.swift in Sources */,
 				B58610C6194115A40001A639 /* MainController.swift in Sources */,
 				B5BB6F65193FB3E30011AD08 /* SEQuestion.swift in Sources */,
+				B58610C8194126570001A639 /* TagBubbleView.swift in Sources */,
 				B5BB6F63193FA2830011AD08 /* QuestionListTableViewController.swift in Sources */,
 				B5BB6F6B193FC6800011AD08 /* QuestionDetailsViewController.swift in Sources */,
 			);
