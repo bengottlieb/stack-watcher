@@ -26,8 +26,8 @@ class AlertManager : NSObject, UIAlertViewDelegate {
 		if let controller: AnyClass = alertController {
 			var alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
 			
-			for index in 0..buttonTitles.count {
-				alert.addAction(UIAlertAction(title: buttonTitles[index], style: (index == 0) ? UIAlertActionStyle.Cancel :  UIAlertActionStyle.Default, handler: {(alert :UIAlertAction!) -> Void in
+			for (index, title) in enumerate(buttonTitles) {
+				alert.addAction(UIAlertAction(title: title, style: (index == 0) ? UIAlertActionStyle.Cancel :  UIAlertActionStyle.Default, handler: {(alert :UIAlertAction!) -> Void in
 					completion(buttonIndex: index)
 				}))
 			}

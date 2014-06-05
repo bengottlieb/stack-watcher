@@ -21,17 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		self.window!.backgroundColor = UIColor.whiteColor()
 		
 		
-		var masterNav = UINavigationController(rootViewController: QuestionListTableViewController())
 		
 		if UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
-			var split = UISplitViewController()
-			var detailNav = UINavigationController(rootViewController: QuestionDetailsViewController())
-		
-			split.viewControllers = [ masterNav, detailNav ]
-		
-			self.window!.rootViewController = split
+			self.window!.rootViewController = MainController()
 		} else {
-			self.window!.rootViewController = masterNav
+			self.window!.rootViewController = UINavigationController(rootViewController: QuestionListTableViewController())
 		}
 		self.window!.makeKeyAndVisible()
 		
