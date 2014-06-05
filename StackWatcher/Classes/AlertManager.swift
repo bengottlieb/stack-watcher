@@ -29,7 +29,7 @@ class AlertManager : NSObject, UIAlertViewDelegate {
 			for index in 0..buttonTitles.count {
 				alert.addAction(UIAlertAction(title: buttonTitles[index], style: (index == 0) ? UIAlertActionStyle.Cancel :  UIAlertActionStyle.Default, handler: {(alert :UIAlertAction!) -> Void in
 					completion(buttonIndex: index)
-					}))
+				}))
 			}
 			
 			UIApplication.sharedApplication().delegate?.window?.rootViewController.presentViewController(alert, animated: true, completion: nil)

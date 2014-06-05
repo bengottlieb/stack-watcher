@@ -22,13 +22,21 @@ class QuestionDetailsViewController: UIViewController {
         // Custom initialization
     }
 	
+	convenience init(question: SEQuestion) {
+		self.init()
+
+		self.loadQuestion(question)
+	}
+	
 	func reload() {
 		self.webView.reload()
 	}
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		if let pending = self.question {
+			self.loadQuestion(pending)
+		}
         // Do any additional setup after loading the view.
     }
 
@@ -38,13 +46,19 @@ class QuestionDetailsViewController: UIViewController {
     }
 	
 	func didSelectQuestion(note: NSNotification) {
-		var question = note.object as SEQuestion
+		self.loadQuestion(note.object as SEQuestion)
+	}
+	
+	var question: SEQuestion?
+	
+	func loadQuestion(question: SEQuestion) {
+		self.question = question
 		var link = question.link
 		var url = NSURL(string: link)
 		var request = NSURLRequest(URL: url)
 		
 		self.title = question.title
-		self.webView.loadRequest(request)
+		self.webView?.loadRequest(request)
 	}
 
     /*

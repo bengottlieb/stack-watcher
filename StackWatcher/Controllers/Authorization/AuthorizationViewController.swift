@@ -20,6 +20,7 @@ class AuthorizationViewController: UIViewController, UIWebViewDelegate {
 		super.init(nibName: nil, bundle: nil)
 		self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "cancel")
 		self.navigationItem.title = "Authorize Stack Exchange"
+		self.modalPresentationStyle = .FormSheet
     }
 
     override func viewDidLoad() {

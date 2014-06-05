@@ -20,14 +20,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Override point for customization after application launch.
 		self.window!.backgroundColor = UIColor.whiteColor()
 		
-		var split = UISplitViewController()
 		
-		var rightNav = UINavigationController(rootViewController: QuestionDetailsViewController())
+		var masterNav = UINavigationController(rootViewController: QuestionListTableViewController())
 		
-		split.viewControllers = [ MainViewController(), rightNav ]
+		if UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
+			var split = UISplitViewController()
+			var detailNav = UINavigationController(rootViewController: QuestionDetailsViewController())
 		
-		self.window!.rootViewController = split
+			split.viewControllers = [ masterNav, detailNav ]
+		
+			self.window!.rootViewController = split
+		} else {
+			self.window!.rootViewController = masterNav
+		}
 		self.window!.makeKeyAndVisible()
+		
+		self.promptForAuthorization()
 		return true
 	}
 
@@ -142,5 +150,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	    return urls[urls.endIndex-1] as NSURL
 	}
 
+	func promptForAuthorization() {
+		if (!StackInterface.DefaultInterface.isAuthorized) {
+			AlertManager.DefaultManager.showAlertTitled("Not Authorized Yet", message: "You've not yet authorized with Stack Exchange. Would you like to do so now?", buttonTitles: [ "Cancel", "Authorize" ], completion: {(buttonIndex: Int) -> () in
+				if buttonIndex == 1 {
+					self.authenticate()
+				}
+				})
+		}
+	}
+	
+	@IBAction func authenticate() {
+		if (StackInterface.DefaultInterface.isAuthorized) {
+			AlertManager.DefaultManager.showAlertTitled("Already Authorized", message: "You've already authorized with Stack Exchange.", buttonTitles: [ "OK" ])
+		} else {
+			let auth = AuthorizationViewController(URL: StackInterface.DefaultInterface.authorizationURL)
+			let nav = UINavigationController(rootViewController: auth)
+			nav.modalPresentationStyle = .PageSheet
+			
+			self.window?.rootViewController.presentViewController(nav, animated: true, completion: nil)
+		}
+	}
+	
+	
 }
 

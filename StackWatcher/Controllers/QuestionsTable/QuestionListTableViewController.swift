@@ -37,7 +37,10 @@ class QuestionListTableViewController: UITableViewController {
     }
 
 	func updateQuestions() {
-		if !StackInterface.DefaultInterface.isAuthorized { return }
+		if !StackInterface.DefaultInterface.isAuthorized {
+			(UIApplication.sharedApplication().delegate as AppDelegate).promptForAuthorization()
+			return
+		}
 		
 		StackInterface.DefaultInterface.fetchQuestionsForTag(self.searchTag, completion: {(results: SEQuestion[], error: NSError?) -> Void in
 				self.questions = results
@@ -79,7 +82,11 @@ class QuestionListTableViewController: UITableViewController {
 	override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
 		let question = self.questions[indexPath!.row]
 		
-		NSNotificationCenter.defaultCenter().postNotificationName(StackInterface.DefaultInterface.questionSelectedNotificationName, object: question)
+		if UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
+			NSNotificationCenter.defaultCenter().postNotificationName(StackInterface.DefaultInterface.questionSelectedNotificationName, object: question)
+		} else {
+			self.navigationController.pushViewController(QuestionDetailsViewController(question: question), animated: true)
+		}
 	}
 	
     /*
