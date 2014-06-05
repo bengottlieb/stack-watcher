@@ -7,10 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B527B639193FF53C004C1B4D /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527B637193FF53C004C1B4D /* QuestionTableViewCell.swift */; };
+		B527B63A193FF53C004C1B4D /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B527B638193FF53C004C1B4D /* QuestionTableViewCell.xib */; };
 		B5AB2197193F6A4A00F49BC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AB2196193F6A4A00F49BC7 /* AppDelegate.swift */; };
 		B5AB219A193F6A4A00F49BC7 /* StackWatcher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5AB2198193F6A4A00F49BC7 /* StackWatcher.xcdatamodeld */; };
 		B5AB219C193F6A4A00F49BC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5AB219B193F6A4A00F49BC7 /* Images.xcassets */; };
 		B5AB21A8193F6A4A00F49BC7 /* StackWatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AB21A7193F6A4A00F49BC7 /* StackWatcherTests.swift */; };
+		B5AB21B2193F6A5C00F49BC7 /* StackWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AB21B1193F6A5C00F49BC7 /* StackWatcher.swift */; };
+		B5BB6F59193F6E010011AD08 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6F57193F6E010011AD08 /* MainViewController.swift */; };
+		B5BB6F5A193F6E010011AD08 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5BB6F58193F6E010011AD08 /* MainViewController.xib */; };
+		B5BB6F5D193F8EEF0011AD08 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6F5B193F8EEF0011AD08 /* AuthorizationViewController.swift */; };
+		B5BB6F5E193F8EEF0011AD08 /* AuthorizationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5BB6F5C193F8EEF0011AD08 /* AuthorizationViewController.xib */; };
+		B5BB6F63193FA2830011AD08 /* QuestionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6F62193FA2830011AD08 /* QuestionListTableViewController.swift */; };
+		B5BB6F65193FB3E30011AD08 /* SEQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6F64193FB3E30011AD08 /* SEQuestion.swift */; };
+		B5BB6F6B193FC6800011AD08 /* QuestionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6F69193FC6800011AD08 /* QuestionDetailsViewController.swift */; };
+		B5BB6F6C193FC6800011AD08 /* QuestionDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5BB6F6A193FC6800011AD08 /* QuestionDetailsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B527B637193FF53C004C1B4D /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionTableViewCell.swift; path = StackWatcher/Controllers/QuestionsTable/QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		B527B638193FF53C004C1B4D /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionTableViewCell.xib; path = StackWatcher/Controllers/QuestionsTable/QuestionTableViewCell.xib; sourceTree = "<group>"; };
 		B5AB2191193F6A4A00F49BC7 /* StackWatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackWatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AB2195193F6A4A00F49BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5AB2196193F6A4A00F49BC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +45,16 @@
 		B5AB21A1193F6A4A00F49BC7 /* StackWatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackWatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AB21A6193F6A4A00F49BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5AB21A7193F6A4A00F49BC7 /* StackWatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackWatcherTests.swift; sourceTree = "<group>"; };
+		B5AB21B1193F6A5C00F49BC7 /* StackWatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StackWatcher.swift; path = StackWatcher/Classes/StackWatcher.swift; sourceTree = "<group>"; };
+		B5BB6F57193F6E010011AD08 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = "StackWatcher/Controllers/Main Controller/MainViewController.swift"; sourceTree = "<group>"; };
+		B5BB6F58193F6E010011AD08 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = "StackWatcher/Controllers/Main Controller/MainViewController.xib"; sourceTree = "<group>"; };
+		B5BB6F5B193F8EEF0011AD08 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthorizationViewController.swift; path = StackWatcher/Controllers/Authorization/AuthorizationViewController.swift; sourceTree = "<group>"; };
+		B5BB6F5C193F8EEF0011AD08 /* AuthorizationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AuthorizationViewController.xib; path = StackWatcher/Controllers/Authorization/AuthorizationViewController.xib; sourceTree = "<group>"; };
+		B5BB6F5F193F94B40011AD08 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		B5BB6F62193FA2830011AD08 /* QuestionListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionListTableViewController.swift; path = StackWatcher/Controllers/QuestionsTable/QuestionListTableViewController.swift; sourceTree = "<group>"; };
+		B5BB6F64193FB3E30011AD08 /* SEQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SEQuestion.swift; path = StackWatcher/Classes/SEQuestion.swift; sourceTree = "<group>"; };
+		B5BB6F69193FC6800011AD08 /* QuestionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionDetailsViewController.swift; path = "StackWatcher/Controllers/Question Details/QuestionDetailsViewController.swift"; sourceTree = "<group>"; };
+		B5BB6F6A193FC6800011AD08 /* QuestionDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionDetailsViewController.xib; path = "StackWatcher/Controllers/Question Details/QuestionDetailsViewController.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +78,13 @@
 		B5AB2188193F6A4A00F49BC7 = {
 			isa = PBXGroup;
 			children = (
+				B5AB21B1193F6A5C00F49BC7 /* StackWatcher.swift */,
+				B5BB6F64193FB3E30011AD08 /* SEQuestion.swift */,
+				B5BB6F68193FC61B0011AD08 /* Questions Table */,
+				B5BB6F61193FA0B80011AD08 /* Main View Controller */,
+				B5BB6F6D193FC6A70011AD08 /* Question Details */,
+				B5BB6F5F193F94B40011AD08 /* MyPlayground.playground */,
+				B5BB6F60193FA0AC0011AD08 /* Authorization Controller */,
 				B5AB2193193F6A4A00F49BC7 /* StackWatcher */,
 				B5AB21A4193F6A4A00F49BC7 /* StackWatcherTests */,
 				B5AB2192193F6A4A00F49BC7 /* Products */,
@@ -104,6 +134,43 @@
 				B5AB21A6193F6A4A00F49BC7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5BB6F60193FA0AC0011AD08 /* Authorization Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B5BB6F5B193F8EEF0011AD08 /* AuthorizationViewController.swift */,
+				B5BB6F5C193F8EEF0011AD08 /* AuthorizationViewController.xib */,
+			);
+			name = "Authorization Controller";
+			sourceTree = "<group>";
+		};
+		B5BB6F61193FA0B80011AD08 /* Main View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B5BB6F57193F6E010011AD08 /* MainViewController.swift */,
+				B5BB6F58193F6E010011AD08 /* MainViewController.xib */,
+			);
+			name = "Main View Controller";
+			sourceTree = "<group>";
+		};
+		B5BB6F68193FC61B0011AD08 /* Questions Table */ = {
+			isa = PBXGroup;
+			children = (
+				B5BB6F62193FA2830011AD08 /* QuestionListTableViewController.swift */,
+				B527B637193FF53C004C1B4D /* QuestionTableViewCell.swift */,
+				B527B638193FF53C004C1B4D /* QuestionTableViewCell.xib */,
+			);
+			name = "Questions Table";
+			sourceTree = "<group>";
+		};
+		B5BB6F6D193FC6A70011AD08 /* Question Details */ = {
+			isa = PBXGroup;
+			children = (
+				B5BB6F69193FC6800011AD08 /* QuestionDetailsViewController.swift */,
+				B5BB6F6A193FC6800011AD08 /* QuestionDetailsViewController.xib */,
+			);
+			name = "Question Details";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +253,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5AB219C193F6A4A00F49BC7 /* Images.xcassets in Resources */,
+				B5BB6F6C193FC6800011AD08 /* QuestionDetailsViewController.xib in Resources */,
+				B5BB6F5A193F6E010011AD08 /* MainViewController.xib in Resources */,
+				B527B63A193FF53C004C1B4D /* QuestionTableViewCell.xib in Resources */,
+				B5BB6F5E193F8EEF0011AD08 /* AuthorizationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,8 +274,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B527B639193FF53C004C1B4D /* QuestionTableViewCell.swift in Sources */,
+				B5AB21B2193F6A5C00F49BC7 /* StackWatcher.swift in Sources */,
 				B5AB2197193F6A4A00F49BC7 /* AppDelegate.swift in Sources */,
 				B5AB219A193F6A4A00F49BC7 /* StackWatcher.xcdatamodeld in Sources */,
+				B5BB6F5D193F8EEF0011AD08 /* AuthorizationViewController.swift in Sources */,
+				B5BB6F59193F6E010011AD08 /* MainViewController.swift in Sources */,
+				B5BB6F65193FB3E30011AD08 /* SEQuestion.swift in Sources */,
+				B5BB6F63193FA2830011AD08 /* QuestionListTableViewController.swift in Sources */,
+				B5BB6F6B193FC6800011AD08 /* QuestionDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +461,7 @@
 				B5AB21AD193F6A4A00F49BC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5AB21AE193F6A4A00F49BC7 /* Build configuration list for PBXNativeTarget "StackWatcherTests" */ = {
 			isa = XCConfigurationList;
@@ -391,6 +470,7 @@
 				B5AB21B0193F6A4A00F49BC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
