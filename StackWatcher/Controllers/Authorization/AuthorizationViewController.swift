@@ -40,7 +40,7 @@ class AuthorizationViewController: UIViewController, UIWebViewDelegate {
 			if fragComponents?.count >= 2 {
 				StackInterface.DefaultInterface.authToken = fragComponents![1] as String
 				self.dismissViewControllerAnimated(true, completion: nil)
-				
+				NSNotificationCenter.defaultCenter().postNotificationName(StackInterface.DefaultInterface.didAuthenticateNotificationName, object: nil)
 			}
 		}
 		

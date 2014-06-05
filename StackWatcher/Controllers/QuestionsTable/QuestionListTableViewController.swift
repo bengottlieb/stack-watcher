@@ -16,7 +16,8 @@ class QuestionListTableViewController: UITableViewController {
 		questions = []
         super.init(style: UITableViewStyle.Plain)
 		title = "Questions"
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: "questionsUpdated:", name: StackInterface.DefaultInterface.questionsAvailableNotificationName, object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateQuestions", name: StackInterface.DefaultInterface.didAuthenticateNotificationName, object: nil)
+		self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: "updateQuestions")
     }
 	
 	init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
@@ -33,14 +34,6 @@ class QuestionListTableViewController: UITableViewController {
 		
 		self.tableView.registerNib(UINib(nibName: "QuestionTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
 		self.tableView.rowHeight = 67
-		//self.tableView.registerClass(QuestionTableViewCell.self, forCellReuseIdentifier: "cell")
-		
-//		self.tableView.registerClass(UITableViewCell(), forCellReuseIdentifier: "cell")
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
 	func updateQuestions() {
@@ -72,16 +65,8 @@ class QuestionListTableViewController: UITableViewController {
         // Return the number of rows in the section.
 		return self.questions.count
     }
-	
-	func questionsUpdated(note: NSNotification) {
-		self.questions = note.object as SEQuestion[]
-		dispatch_async(dispatch_get_main_queue()) {
-			self.tableView.reloadData()
-		}
-		
-	}
 
-    override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
+	override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
 		let cell: QuestionTableViewCell = tableView?.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as QuestionTableViewCell
 		let question = self.questions[indexPath!.row]
 		

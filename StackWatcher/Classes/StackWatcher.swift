@@ -40,6 +40,7 @@ class StackInterface {
 	let site = "stackoverflow.com"
 	let apiVersion = "2.2"
 	
+	let didAuthenticateNotificationName = "didAuthenticateNotificationName"
 	let questionsAvailableNotificationName = "questionsAvailableNotificationName"
 	let questionSelectedNotificationName = "questionSelectedNotificationName"
 	

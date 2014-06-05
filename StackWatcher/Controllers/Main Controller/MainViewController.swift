@@ -8,14 +8,14 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UIWebViewDelegate {
+class MainViewController: UINavigationController {
 	var naggedAboutAuth: Bool
 	let table = QuestionListTableViewController()
 	
 	init() {
 		self.naggedAboutAuth = false
 		super.init(nibName: nil, bundle: nil)
-		self.addChildViewController(self.table)
+		self.pushViewController(self.table, animated: false)
 	}
 	
     override func viewDidLoad() {
@@ -53,13 +53,6 @@ class MainViewController: UIViewController, UIWebViewDelegate {
 	@IBAction func authenticate() {
 		if (StackInterface.DefaultInterface.isAuthorized) {
 			AlertManager.DefaultManager.showAlertTitled("Already Authorized", message: "You've already authorized with Stack Exchange.", buttonTitles: [ "OK" ])
-			
-//			var alert = UIAlertController(title: "Already Authorized", message: "You've already authorized with Stack Exchange.", preferredStyle: .Alert)
-//
-//			alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: {(alert :UIAlertAction!) -> Void in
-//				
-//				}))
-//			self.presentViewController(alert, animated: true, completion: nil)
 		} else {
 			let auth = AuthorizationViewController(URL: StackInterface.DefaultInterface.authorizationURL)
 			let nav = UINavigationController(rootViewController: auth)

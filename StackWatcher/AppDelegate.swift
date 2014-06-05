@@ -20,13 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Override point for customization after application launch.
 		self.window!.backgroundColor = UIColor.whiteColor()
 		
-		var controller = MainViewController()
 		var split = UISplitViewController()
 		
-		var	leftNav = UINavigationController(rootViewController: controller)
 		var rightNav = UINavigationController(rootViewController: QuestionDetailsViewController())
 		
-		split.viewControllers = [ leftNav, rightNav ]
+		split.viewControllers = [ MainViewController(), rightNav ]
 		
 		self.window!.rootViewController = split
 		self.window!.makeKeyAndVisible()
