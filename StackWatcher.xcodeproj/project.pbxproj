@@ -23,6 +23,7 @@
 		B5DA371E194077EB009C97AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DA371D194077EB009C97AD /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B5DA3720194077EF009C97AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DA371F194077EF009C97AD /* Foundation.framework */; };
 		B5DA3723194078CA009C97AD /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DA3722194078CA009C97AD /* AlertManager.swift */; };
+		B5FBC76D1940E066009C5540 /* StringFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC76C1940E066009C5540 /* StringFilter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,9 @@
 		B5DA371D194077EB009C97AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B5DA371F194077EF009C97AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B5DA3722194078CA009C97AD /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertManager.swift; path = StackWatcher/Classes/AlertManager.swift; sourceTree = "<group>"; };
+		B5FBC76A1940E065009C5540 /* StackWatcher-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StackWatcher-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		B5FBC76B1940E066009C5540 /* StringFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StringFilter.h; path = StackWatcher/Classes/StringFilter.h; sourceTree = "<group>"; };
+		B5FBC76C1940E066009C5540 /* StringFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StringFilter.m; path = StackWatcher/Classes/StringFilter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				B5DA3722194078CA009C97AD /* AlertManager.swift */,
 				B5AB21B1193F6A5C00F49BC7 /* StackWatcher.swift */,
 				B5BB6F64193FB3E30011AD08 /* SEQuestion.swift */,
+				B5FBC76B1940E066009C5540 /* StringFilter.h */,
+				B5FBC76C1940E066009C5540 /* StringFilter.m */,
 				B5BB6F68193FC61B0011AD08 /* Questions Table */,
 				B5BB6F6D193FC6A70011AD08 /* Question Details */,
 				B5BB6F60193FA0AC0011AD08 /* Authorization Controller */,
@@ -108,6 +114,7 @@
 		B5AB2193193F6A4A00F49BC7 /* StackWatcher */ = {
 			isa = PBXGroup;
 			children = (
+				B5FBC76A1940E065009C5540 /* StackWatcher-Bridging-Header.h */,
 				B5AB2196193F6A4A00F49BC7 /* AppDelegate.swift */,
 				B5AB219B193F6A4A00F49BC7 /* Images.xcassets */,
 				B5AB2198193F6A4A00F49BC7 /* StackWatcher.xcdatamodeld */,
@@ -280,6 +287,7 @@
 			files = (
 				B527B639193FF53C004C1B4D /* QuestionTableViewCell.swift in Sources */,
 				B5AB21B2193F6A5C00F49BC7 /* StackWatcher.swift in Sources */,
+				B5FBC76D1940E066009C5540 /* StringFilter.m in Sources */,
 				B5DA3723194078CA009C97AD /* AlertManager.swift in Sources */,
 				B5AB2197193F6A4A00F49BC7 /* AppDelegate.swift in Sources */,
 				B5AB219A193F6A4A00F49BC7 /* StackWatcher.xcdatamodeld in Sources */,
@@ -393,10 +401,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = StackWatcher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StackWatcher-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -405,10 +416,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = StackWatcher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StackWatcher-Bridging-Header.h";
 			};
 			name = Release;
 		};

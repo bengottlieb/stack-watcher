@@ -13,7 +13,7 @@ class SEQuestion : NSObject {
 	var title, link: String
 	
 	init(dictionary: NSDictionary) {
-		title = dictionary["title"] as String
+		title = (dictionary["title"] as NSString).filteredString()
 		link = dictionary["link"] as String
 		super.init()
 	}
