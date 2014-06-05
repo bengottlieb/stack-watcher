@@ -152,11 +152,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func promptForAuthorization() {
 		if (!StackInterface.DefaultInterface.isAuthorized) {
-			AlertManager.DefaultManager.showAlertTitled("Not Authorized Yet", message: "You've not yet authorized with Stack Exchange. Would you like to do so now?", buttonTitles: [ "Cancel", "Authorize" ], completion: {(buttonIndex: Int) -> () in
-				if buttonIndex == 1 {
-					self.authenticate()
-				}
-				})
+			if StackInterface.DefaultInterface.clientKey == "" {
+				AlertManager.DefaultManager.showAlertTitled("No Client Key Set", message: "Make sure you get an API key from api.stackexchange.com, and set it as your Client Key before trying to use this application.", buttonTitles: [  ])
+			} else {
+				AlertManager.DefaultManager.showAlertTitled("Not Authorized Yet", message: "You've not yet authorized with Stack Exchange. Would you like to do so now?", buttonTitles: [ "Cancel", "Authorize" ], completion: {(buttonIndex: Int) -> () in
+					if buttonIndex == 1 {
+						self.authenticate()
+					}
+					})
+			}
 		}
 	}
 	
