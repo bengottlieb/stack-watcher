@@ -11,15 +11,8 @@ import UIKit
 class AlertManager : NSObject, UIAlertViewDelegate {
 	class var DefaultManager: AlertManager {
 		get {
-			struct singletonMetaData {
-				static var instance: AlertManager?
-				static var token: dispatch_once_t = 0
-			}
-			
-			dispatch_once(&singletonMetaData.token) {
-				singletonMetaData.instance = AlertManager()
-			}
-			
+			struct singletonMetaData { static var instance: AlertManager?; static var token: dispatch_once_t = 0 }
+			dispatch_once(&singletonMetaData.token) { singletonMetaData.instance = AlertManager() }
 			return singletonMetaData.instance!
 		}
 	}

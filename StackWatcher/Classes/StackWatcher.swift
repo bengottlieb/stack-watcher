@@ -11,15 +11,8 @@ import Foundation
 class StackInterface {
 	class var DefaultInterface: StackInterface {
 		get {
-			struct singletonMetaData {
-				static var instance: StackInterface?
-				static var token: dispatch_once_t = 0
-			}
-			
-			dispatch_once(&singletonMetaData.token) {
-				singletonMetaData.instance = StackInterface()
-			}
-			
+			struct singletonMetaData { static var instance: StackInterface?; static var token: dispatch_once_t = 0 }
+			dispatch_once(&singletonMetaData.token) { singletonMetaData.instance = StackInterface() }
 			return singletonMetaData.instance!
 		}
 	}
