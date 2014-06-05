@@ -13,8 +13,8 @@ class TagBubbleView: UIScrollView {
 		didSet {
 			while self.subviews.count > 0 { self.subviews[0].removeFromSuperview() }
 			
-			var x: Float = 0.0
-			var y: Float = self.bounds.size.height / 2
+			var x: CGFloat = 0.0
+			var y: CGFloat = self.bounds.size.height / 2
 			
 			for tag in tags {
 				var label = UILabel(frame: CGRect.zeroRect)
@@ -27,7 +27,7 @@ class TagBubbleView: UIScrollView {
 				label.backgroundColor = UIColor.lightGrayColor()
 				label.textColor = UIColor.whiteColor()
 				
-				var labelWidth: Float = label.bounds.size.width
+				var labelWidth: CGFloat = label.bounds.size.width
 				label.center = CGPoint(x: x + labelWidth / 2, y: y)
 				x += labelWidth + 5
 				self.addSubview(label)
