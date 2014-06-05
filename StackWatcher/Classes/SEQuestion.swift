@@ -11,10 +11,12 @@ import UIKit
 class SEQuestion : NSObject {
 
 	var title, link: String
+	var answer_count: Int;
 	
 	init(dictionary: NSDictionary) {
 		title = (dictionary["title"] as NSString).filteredString()
 		link = dictionary["link"] as String
+		answer_count = dictionary["answer_count"] as Int
 		super.init()
 	}
 	

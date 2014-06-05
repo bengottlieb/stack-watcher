@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <objects>
@@ -13,27 +14,42 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="308" translatesAutoresizingMaskIntoConstraints="NO" id="5ET-ul-Pre">
-                        <rect key="frame" x="6" y="2" width="308" height="36"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="264" translatesAutoresizingMaskIntoConstraints="NO" id="5ET-ul-Pre">
+                        <rect key="frame" x="50" y="1" width="264" height="65"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="36" id="aHb-aa-kwF"/>
+                            <constraint firstAttribute="height" constant="65" id="aHb-aa-kwF"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxf-IO-OIn">
+                        <rect key="frame" x="5" y="15" width="37" height="37"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="37" id="Mxm-uc-iTJ"/>
+                            <constraint firstAttribute="height" constant="37" id="zJN-qW-e45"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="5ET-ul-Pre" firstAttribute="leading" secondItem="zxf-IO-OIn" secondAttribute="trailing" constant="8" id="APL-3U-5Kt"/>
                     <constraint firstAttribute="trailing" secondItem="5ET-ul-Pre" secondAttribute="trailing" constant="6" id="Flf-cf-pWx"/>
-                    <constraint firstItem="5ET-ul-Pre" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="IOX-ym-CgA"/>
-                    <constraint firstItem="5ET-ul-Pre" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="wRo-Rf-4y1"/>
+                    <constraint firstItem="zxf-IO-OIn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="HXR-RQ-Ze0"/>
+                    <constraint firstItem="5ET-ul-Pre" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="IOX-ym-CgA"/>
+                    <constraint firstItem="zxf-IO-OIn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="eUC-q6-Gak"/>
+                    <constraint firstAttribute="centerY" secondItem="zxf-IO-OIn" secondAttribute="centerY" id="jz8-fD-aiM"/>
+                    <constraint firstItem="5ET-ul-Pre" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="wRo-Rf-4y1"/>
                 </constraints>
             </tableViewCellContentView>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
+                <outlet property="answerCountLabel" destination="zxf-IO-OIn" id="RCq-X8-F7P"/>
                 <outlet property="titleLabel" destination="5ET-ul-Pre" id="27r-cL-V9p"/>
             </connections>
-            <point key="canvasLocation" x="139" y="164.5"/>
+            <point key="canvasLocation" x="139" y="161.5"/>
         </tableViewCell>
     </objects>
 </document>
