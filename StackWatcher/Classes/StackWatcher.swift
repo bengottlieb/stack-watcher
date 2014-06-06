@@ -24,6 +24,14 @@ class StackInterface {
 		} else {
 			self.authToken = ""
 		}
+		
+		let cal = NSCalendar.currentCalendar()
+		var comp = cal.components(NSCalendarUnit.CalendarUnitYear | NSCalendarUnit.CalendarUnitMonth | NSCalendarUnit.CalendarUnitDay | NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute | NSCalendarUnit.CalendarUnitSecond, fromDate: NSDate())
+		
+		comp.hour = 0
+		comp.minute = 0
+		comp.second = 0
+		self.lastCheckDate = cal.dateFromComponents(comp)
 	}
 	
 	let clientId = "3091"
@@ -49,6 +57,7 @@ class StackInterface {
 	
 	var authorizationURL : NSURL { return NSURL.URLWithString("https://stackexchange.com/oauth/dialog?client_id=\(self.clientId)&scope=no_expiry&redirect_uri=\(validationURI)") }
 	
+	var lastCheckDate = NSDate()
 	var session : NSURLSession?
 	
 	func generateSession() -> NSURLSession {
@@ -71,18 +80,29 @@ class StackInterface {
 	
 	
 	func unanswerURLForTag(tag: String, from: NSDate) -> NSURL {
-		var	string = "http://api.stackexchange.com/\(self.apiVersion)/questions/unanswered?fromdate=\(from.stackExchangeDateString)&order=desc&sort=activity&tagged=\(tag)&site=\(self.site)&key=\(self.clientKey)"
+		var	string = "http://api.stackexchange.com/\(self.apiVersion)/questions/unanswered?fromdate=\(from.stackExchangeDateString())&order=desc&sort=activity&tagged=\(tag)&site=\(self.site)&key=\(self.clientKey)"
 		return NSURL(string: string)
 	}
 	
 	func fetchQuestionsForTag(tag: String, completion: (results: SEQuestion[], error: NSError?) -> Void) {
-		var url = self.unanswerURLForTag(tag, from: NSDate())
+		let date = self.lastCheckDate
+		
+		var url = self.unanswerURLForTag(tag, from: date)
 		var task = self.generateSession().dataTaskWithURL(url, completionHandler: {(data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
 			var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
-
+			
+			if let errorNumber = dict["error_id"] as? NSNumber {
+				var name = dict["error_name"] as? NSString
+				var message = dict["error_message"] as? NSString
+				var title = "\(name): \(message)"
+				
+				AlertManager.DefaultManager.showAlertTitled(title, message: "", buttonTitles: [ "OK "])
+				return
+			}
+			
 			var	questions = SEQuestion[]()
 			
-			for item in dict["items"] as NSDictionary[] {
+			for item in dict["items"]? as NSDictionary[] {
 				var question = SEQuestion(dictionary: item)
 				questions.append(question)
 			}
@@ -98,8 +118,8 @@ class StackInterface {
 
 
 extension NSDate {
-	var stackExchangeDateString: String {
-		
-		return "1401840000"
+	func stackExchangeDateString() -> String {
+		var seconds = Int(self.timeIntervalSince1970)
+		return "\(seconds)"
 	}
 }
