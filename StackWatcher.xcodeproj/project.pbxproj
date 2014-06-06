@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B505C7AD19428A7D00390F27 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B505C7AC19428A7D00390F27 /* CoreData.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B527B639193FF53C004C1B4D /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527B637193FF53C004C1B4D /* QuestionTableViewCell.swift */; };
 		B527B63A193FF53C004C1B4D /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B527B638193FF53C004C1B4D /* QuestionTableViewCell.xib */; };
 		B58610C6194115A40001A639 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58610C5194115A40001A639 /* MainController.swift */; };
@@ -23,7 +24,7 @@
 		B5BB6F6B193FC6800011AD08 /* QuestionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6F69193FC6800011AD08 /* QuestionDetailsViewController.swift */; };
 		B5BB6F6C193FC6800011AD08 /* QuestionDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5BB6F6A193FC6800011AD08 /* QuestionDetailsViewController.xib */; };
 		B5DA371E194077EB009C97AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DA371D194077EB009C97AD /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		B5DA3720194077EF009C97AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DA371F194077EF009C97AD /* Foundation.framework */; };
+		B5DA3720194077EF009C97AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DA371F194077EF009C97AD /* Foundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B5DA3723194078CA009C97AD /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DA3722194078CA009C97AD /* AlertManager.swift */; };
 		B5F6607B19422E8600D27266 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5F6607919422E8600D27266 /* Model.xcdatamodeld */; };
 		B5F6607E1942319E00D27266 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6607D1942319E00D27266 /* Store.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B505C7AC19428A7D00390F27 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B527B637193FF53C004C1B4D /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionTableViewCell.swift; path = StackWatcher/Controllers/QuestionsTable/QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		B527B638193FF53C004C1B4D /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionTableViewCell.xib; path = StackWatcher/Controllers/QuestionsTable/QuestionTableViewCell.xib; sourceTree = "<group>"; };
 		B58610C5194115A40001A639 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainController.swift; path = StackWatcher/Controllers/Main/MainController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B505C7AD19428A7D00390F27 /* CoreData.framework in Frameworks */,
 				B5DA3720194077EF009C97AD /* Foundation.framework in Frameworks */,
 				B5DA371E194077EB009C97AD /* UIKit.framework in Frameworks */,
 			);
@@ -189,6 +192,7 @@
 		B5DA372119407807009C97AD /* iOS 7 Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B505C7AC19428A7D00390F27 /* CoreData.framework */,
 				B5DA371F194077EF009C97AD /* Foundation.framework */,
 				B5DA371D194077EB009C97AD /* UIKit.framework */,
 			);

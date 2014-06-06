@@ -33,9 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		return true
 	}
-	
-	var scheduler: NSBackgroundActivityScheduler?
-	
 
 	func applicationWillResignActive(application: UIApplication) {
 		// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -148,8 +145,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	    return urls[urls.endIndex-1] as NSURL
 	}
 
+	var showingAuthorizationPrompt = false
 	func promptForAuthorization() {
+		if self.showingAuthorizationPrompt { return }
+		
 		if (!StackInterface.DefaultInterface.isAuthorized) {
+			self.showingAuthorizationPrompt = true
 			if StackInterface.DefaultInterface.clientKey == "" {
 				AlertManager.DefaultManager.showAlertTitled("No Client Key Set", message: "Make sure you get an API key from api.stackexchange.com, and set it as your Client Key before trying to use this application.", buttonTitles: [  ])
 			} else {
@@ -157,7 +158,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 					if buttonIndex == 1 {
 						self.authenticate()
 					}
-					})
+					self.showingAuthorizationPrompt = false
+				})
 			}
 		}
 	}
