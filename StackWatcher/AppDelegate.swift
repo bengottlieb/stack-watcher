@@ -31,17 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		self.promptForAuthorization()
 		
-		
-		
-		self.scheduler = NSBackgroundActivityScheduler(identifier:  "com.standalone.stackwatcher")
-		
-		self.scheduler!.interval = 2.0
-		self.scheduler!.repeats = true
-		self.scheduler!.scheduleWithBlock({(completion: NSBackgroundActivityCompletionHandler!) in
-			println("Fired at: \(NSDate())")
-			completion(NSBackgroundActivityResult.Finished)
-		})
-		
 		return true
 	}
 	
