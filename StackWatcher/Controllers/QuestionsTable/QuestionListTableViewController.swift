@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import CoreData
 
 class QuestionListTableViewController: UITableViewController {
-	var questions: SEQuestion[]
+	var questions: PostedQuestion[]
 	var searchTag = "swift-language"
 	
     init() {
@@ -42,12 +43,20 @@ class QuestionListTableViewController: UITableViewController {
 			return
 		}
 		
-		StackInterface.DefaultInterface.fetchQuestionsForTag(self.searchTag, completion: {(results: SEQuestion[], error: NSError?) -> Void in
-				self.questions = results
+		StackInterface.DefaultInterface.fetchQuestionsForTag(self.searchTag, completion: {(error: NSError?) -> Void in
 				dispatch_async(dispatch_get_main_queue()) {
-					self.tableView.reloadData()
+					self.reloadQuestions()
 				}
 			})
+	}
+	
+	func reloadQuestions() {
+		var request = NSFetchRequest(entityName: "PostedQuestion")
+		
+		var error: NSErrorPointer = nil
+		self.questions = Store.DefaultStore.mainQueueContext.executeFetchRequest(request, error: error) as PostedQuestion[]
+		
+		self.tableView.reloadData()
 	}
 	
     override func didReceiveMemoryWarning() {

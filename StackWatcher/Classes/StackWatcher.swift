@@ -37,7 +37,7 @@ class StackInterface {
 	let clientId = "3091"
 	let authTokenKey = "auth-token"
 	let validationURI = "https://stackexchange.com/oauth/login_success"
-	let clientKey = ""
+	let clientKey = "ajLLBq1xNwKq7SZY3MZ0Zw(("
 	let site = "stackoverflow.com"
 	let apiVersion = "2.2"
 	
@@ -84,32 +84,37 @@ class StackInterface {
 		return NSURL(string: string)
 	}
 	
-	func fetchQuestionsForTag(tag: String, completion: (results: SEQuestion[], error: NSError?) -> Void) {
+	func fetchQuestionsForTag(tag: String, completion: (error: NSError?) -> Void) {
 		let date = self.lastCheckDate
 		
 		var url = self.unanswerURLForTag(tag, from: date)
 		var task = self.generateSession().dataTaskWithURL(url, completionHandler: {(data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
-			var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
-			
-			if let errorNumber = dict["error_id"] as? NSNumber {
-				var name = dict["error_name"] as? NSString
-				var message = dict["error_message"] as? NSString
-				var title = "\(name): \(message)"
+			Store.DefaultStore.runClosureInContextQueue({ (moc: NSManagedObjectContext) -> () in
+				var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
 				
-				AlertManager.DefaultManager.showAlertTitled(title, message: "", buttonTitles: [ "OK "])
-				return
-			}
-			
-			var	questions = SEQuestion[]()
-			
-			for item in dict["items"]? as NSDictionary[] {
-				var question = SEQuestion(dictionary: item)
-				questions.append(question)
-			}
-			
-			var note = NSNotification(name: self.questionsAvailableNotificationName, object: questions as AnyObject)
-			
-			completion(results: questions, error:  nil)
+				if let errorNumber = dict["error_id"] as? NSNumber {
+					var name = dict["error_name"] as? NSString
+					var message = dict["error_message"] as? NSString
+					var title = "\(name): \(message)"
+					
+					AlertManager.DefaultManager.showAlertTitled(title, message: "", buttonTitles: [ "OK "])
+					return
+				}
+				
+				var	questions = PostedQuestion[]()
+				
+				for item in dict["items"]? as NSDictionary[] {
+					println("Item: \(item)")
+					var question = PostedQuestion.questionFromDictionary(item, inContext: moc)
+					questions.append(question)
+				}
+				if !moc.save(nil) {
+					AlertManager.DefaultManager.showAlertTitled("Failed to save", message: "", buttonTitles: [ "OK "])
+				}
+				var note = NSNotification(name: self.questionsAvailableNotificationName, object: nil)
+				
+				completion(error:  nil)
+			})
 		})
 		task.resume()
 	}

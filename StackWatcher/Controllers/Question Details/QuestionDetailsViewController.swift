@@ -22,7 +22,7 @@ class QuestionDetailsViewController: UIViewController {
         // Custom initialization
     }
 	
-	convenience init(question: SEQuestion) {
+	convenience init(question: PostedQuestion) {
 		self.init()
 
 		self.loadQuestion(question)
@@ -46,12 +46,12 @@ class QuestionDetailsViewController: UIViewController {
     }
 	
 	func didSelectQuestion(note: NSNotification) {
-		self.loadQuestion(note.object as SEQuestion)
+		self.loadQuestion(note.object as PostedQuestion)
 	}
 	
-	var question: SEQuestion?
+	var question: PostedQuestion?
 	
-	func loadQuestion(question: SEQuestion) {
+	func loadQuestion(question: PostedQuestion) {
 		self.question = question
 		var link = question.link
 		var url = NSURL(string: link)

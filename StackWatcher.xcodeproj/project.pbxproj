@@ -19,12 +19,14 @@
 		B5BB6F5D193F8EEF0011AD08 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6F5B193F8EEF0011AD08 /* AuthorizationViewController.swift */; };
 		B5BB6F5E193F8EEF0011AD08 /* AuthorizationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5BB6F5C193F8EEF0011AD08 /* AuthorizationViewController.xib */; };
 		B5BB6F63193FA2830011AD08 /* QuestionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6F62193FA2830011AD08 /* QuestionListTableViewController.swift */; };
-		B5BB6F65193FB3E30011AD08 /* SEQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6F64193FB3E30011AD08 /* SEQuestion.swift */; };
+		B5BB6F65193FB3E30011AD08 /* PostedQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6F64193FB3E30011AD08 /* PostedQuestion.swift */; };
 		B5BB6F6B193FC6800011AD08 /* QuestionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6F69193FC6800011AD08 /* QuestionDetailsViewController.swift */; };
 		B5BB6F6C193FC6800011AD08 /* QuestionDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5BB6F6A193FC6800011AD08 /* QuestionDetailsViewController.xib */; };
 		B5DA371E194077EB009C97AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DA371D194077EB009C97AD /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B5DA3720194077EF009C97AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DA371F194077EF009C97AD /* Foundation.framework */; };
 		B5DA3723194078CA009C97AD /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DA3722194078CA009C97AD /* AlertManager.swift */; };
+		B5F6607B19422E8600D27266 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5F6607919422E8600D27266 /* Model.xcdatamodeld */; };
+		B5F6607E1942319E00D27266 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6607D1942319E00D27266 /* Store.swift */; };
 		B5FBC76D1940E066009C5540 /* StringFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC76C1940E066009C5540 /* StringFilter.m */; };
 /* End PBXBuildFile section */
 
@@ -56,12 +58,14 @@
 		B5BB6F5C193F8EEF0011AD08 /* AuthorizationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AuthorizationViewController.xib; path = StackWatcher/Controllers/Authorization/AuthorizationViewController.xib; sourceTree = "<group>"; };
 		B5BB6F5F193F94B40011AD08 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		B5BB6F62193FA2830011AD08 /* QuestionListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionListTableViewController.swift; path = StackWatcher/Controllers/QuestionsTable/QuestionListTableViewController.swift; sourceTree = "<group>"; };
-		B5BB6F64193FB3E30011AD08 /* SEQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SEQuestion.swift; path = StackWatcher/Classes/SEQuestion.swift; sourceTree = "<group>"; };
+		B5BB6F64193FB3E30011AD08 /* PostedQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostedQuestion.swift; path = StackWatcher/Classes/PostedQuestion.swift; sourceTree = "<group>"; };
 		B5BB6F69193FC6800011AD08 /* QuestionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionDetailsViewController.swift; path = "StackWatcher/Controllers/Question Details/QuestionDetailsViewController.swift"; sourceTree = "<group>"; };
 		B5BB6F6A193FC6800011AD08 /* QuestionDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionDetailsViewController.xib; path = "StackWatcher/Controllers/Question Details/QuestionDetailsViewController.xib"; sourceTree = "<group>"; };
 		B5DA371D194077EB009C97AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B5DA371F194077EF009C97AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B5DA3722194078CA009C97AD /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertManager.swift; path = StackWatcher/Classes/AlertManager.swift; sourceTree = "<group>"; };
+		B5F6607A19422E8600D27266 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		B5F6607D1942319E00D27266 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Store.swift; path = StackWatcher/Model/Store.swift; sourceTree = "<group>"; };
 		B5FBC76A1940E065009C5540 /* StackWatcher-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StackWatcher-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		B5FBC76B1940E066009C5540 /* StringFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StringFilter.h; path = StackWatcher/Classes/StringFilter.h; sourceTree = "<group>"; };
 		B5FBC76C1940E066009C5540 /* StringFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StringFilter.m; path = StackWatcher/Classes/StringFilter.m; sourceTree = "<group>"; };
@@ -93,9 +97,9 @@
 				B5BB6F5F193F94B40011AD08 /* MyPlayground.playground */,
 				B5DA3722194078CA009C97AD /* AlertManager.swift */,
 				B58610C5194115A40001A639 /* MainController.swift */,
+				B5F6607C19422E9000D27266 /* Model */,
 				B58610C7194126570001A639 /* TagBubbleView.swift */,
 				B5AB21B1193F6A5C00F49BC7 /* StackWatcher.swift */,
-				B5BB6F64193FB3E30011AD08 /* SEQuestion.swift */,
 				B5FBC76B1940E066009C5540 /* StringFilter.h */,
 				B5FBC76C1940E066009C5540 /* StringFilter.m */,
 				B5BB6F68193FC61B0011AD08 /* Questions Table */,
@@ -189,6 +193,16 @@
 				B5DA371D194077EB009C97AD /* UIKit.framework */,
 			);
 			name = "iOS 7 Frameworks";
+			sourceTree = "<group>";
+		};
+		B5F6607C19422E9000D27266 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5F6607919422E8600D27266 /* Model.xcdatamodeld */,
+				B5F6607D1942319E00D27266 /* Store.swift */,
+				B5BB6F64193FB3E30011AD08 /* PostedQuestion.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,10 +312,12 @@
 				B5AB2197193F6A4A00F49BC7 /* AppDelegate.swift in Sources */,
 				B5AB219A193F6A4A00F49BC7 /* StackWatcher.xcdatamodeld in Sources */,
 				B5BB6F5D193F8EEF0011AD08 /* AuthorizationViewController.swift in Sources */,
+				B5F6607E1942319E00D27266 /* Store.swift in Sources */,
 				B58610C6194115A40001A639 /* MainController.swift in Sources */,
-				B5BB6F65193FB3E30011AD08 /* SEQuestion.swift in Sources */,
+				B5BB6F65193FB3E30011AD08 /* PostedQuestion.swift in Sources */,
 				B58610C8194126570001A639 /* TagBubbleView.swift in Sources */,
 				B5BB6F63193FA2830011AD08 /* QuestionListTableViewController.swift in Sources */,
+				B5F6607B19422E8600D27266 /* Model.xcdatamodeld in Sources */,
 				B5BB6F6B193FC6800011AD08 /* QuestionDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +525,17 @@
 			);
 			currentVersion = B5AB2199193F6A4A00F49BC7 /* StackWatcher.xcdatamodel */;
 			path = StackWatcher.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		B5F6607919422E8600D27266 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B5F6607A19422E8600D27266 /* Model.xcdatamodel */,
+			);
+			currentVersion = B5F6607A19422E8600D27266 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = StackWatcher/Model/Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

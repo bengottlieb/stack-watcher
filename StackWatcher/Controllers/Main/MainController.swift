@@ -14,10 +14,10 @@ class MainController: UISplitViewController, UISplitViewControllerDelegate {
 	
 	init() {
 		super.init(nibName: nil, bundle: nil)
+		viewControllers = [ UINavigationController(rootViewController: masterController), UINavigationController(rootViewController: detailController) ]
 
 		self.delegate = self
 		//self.detailController.navigationItem.leftBarButtonItem = self.displayModeButtonItem()
-		self.viewControllers = [ UINavigationController(rootViewController: masterController), UINavigationController(rootViewController: detailController) ]
 	}
 
 	func splitViewController(svc: UISplitViewController!, willHideViewController aViewController: UIViewController!, withBarButtonItem barButtonItem: UIBarButtonItem!, forPopoverController pc: UIPopoverController!) {

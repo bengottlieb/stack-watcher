@@ -9,11 +9,14 @@
 import UIKit
 
 class QuestionTableViewCell: UITableViewCell {
-	var question: SEQuestion? {
+	var question: PostedQuestion? {
 		didSet {
 			//println("Question: \(question)")
 			self.titleLabel.text = self.question!.title
-			self.tagBubbles.tags = self.question!.tags
+				
+			if let tags = self.question?.tags {
+				self.tagBubbles.tags = tags
+			}
 			self.answerCountLabel.text = "\(self.question!.answer_count)"
 		}
 	}
