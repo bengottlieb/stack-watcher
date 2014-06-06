@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 class StackInterface {
 	class var DefaultInterface: StackInterface {
@@ -25,19 +26,24 @@ class StackInterface {
 			self.authToken = ""
 		}
 		
-		let cal = NSCalendar.currentCalendar()
-		var comp = cal.components(NSCalendarUnit.CalendarUnitYear | NSCalendarUnit.CalendarUnitMonth | NSCalendarUnit.CalendarUnitDay | NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute | NSCalendarUnit.CalendarUnitSecond, fromDate: NSDate())
-		
-		comp.hour = 0
-		comp.minute = 0
-		comp.second = 0
-		self.lastCheckDate = cal.dateFromComponents(comp)
+		if let date: NSDate = NSUserDefaults.standardUserDefaults().objectForKey(self.lastCheckedDateKey) as? NSDate {
+			self.lastCheckDate = date
+		} else {
+			let cal = NSCalendar.currentCalendar()
+			var comp = cal.components(NSCalendarUnit.CalendarUnitYear | NSCalendarUnit.CalendarUnitMonth | NSCalendarUnit.CalendarUnitDay | NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute | NSCalendarUnit.CalendarUnitSecond, fromDate: NSDate())
+			
+			comp.hour = 0
+			comp.minute = 0
+			comp.second = 0
+			self.lastCheckDate = cal.dateFromComponents(comp)
+		}
 	}
 	
 	let clientId = "3091"
 	let authTokenKey = "auth-token"
+	let lastCheckedDateKey = "last-check"
 	let validationURI = "https://stackexchange.com/oauth/login_success"
-	let clientKey = "ajLLBq1xNwKq7SZY3MZ0Zw(("
+	let clientKey = ""
 	let site = "stackoverflow.com"
 	let apiVersion = "2.2"
 	
@@ -57,7 +63,7 @@ class StackInterface {
 	
 	var authorizationURL : NSURL { return NSURL.URLWithString("https://stackexchange.com/oauth/dialog?client_id=\(self.clientId)&scope=no_expiry&redirect_uri=\(validationURI)") }
 	
-	var lastCheckDate = NSDate()
+	var lastCheckDate: NSDate
 	var session : NSURLSession?
 	
 	func generateSession() -> NSURLSession {
@@ -89,6 +95,10 @@ class StackInterface {
 		
 		var url = self.unanswerURLForTag(tag, from: date)
 		var task = self.generateSession().dataTaskWithURL(url, completionHandler: {(data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
+			self.lastCheckDate = NSDate()
+			NSUserDefaults.standardUserDefaults().setObject(self.lastCheckDate, forKey: self.lastCheckedDateKey)
+			NSUserDefaults.standardUserDefaults().synchronize()
+			
 			Store.DefaultStore.runClosureInContextQueue({ (moc: NSManagedObjectContext) -> () in
 				var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
 				
@@ -108,6 +118,7 @@ class StackInterface {
 					var question = PostedQuestion.questionFromDictionary(item, inContext: moc)
 					questions.append(question)
 				}
+				println("Downloaded \(questions.count) new questions (from \(date) onward)")
 				if !moc.save(nil) {
 					AlertManager.DefaultManager.showAlertTitled("Failed to save", message: "", buttonTitles: [ "OK "])
 				}
