@@ -114,8 +114,10 @@ class StackInterface {
 					questions.append(question)
 				}
 				println("Downloaded \(questions.count) new questions (from \(date) onward)")
-				if !moc.save(nil) {
-					AlertManager.DefaultManager.showAlertTitled("Failed to save", message: "", buttonTitles: [ "OK "])
+				
+				var error: NSError?
+				if !moc.save(&error) {
+					AlertManager.DefaultManager.showAlertTitled("Failed to save", message: error!.localizedDescription, buttonTitles: [ "OK "])
 				}
 				var note = NSNotification(name: self.questionsAvailableNotificationName, object: nil)
 				

@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class Store {
+class Store: NSObject {
 	var privateContext, mainQueueContext: NSManagedObjectContext
 	
 	init() {
@@ -27,7 +27,8 @@ class Store {
 		mainQueueContext = NSManagedObjectContext(concurrencyType: NSManagedObjectContextConcurrencyType.MainQueueConcurrencyType)
 		mainQueueContext.persistentStoreCoordinator = coordinator
 		
-		NSNotificationCenter().addObserver(self, selector: "willMergeContextChanges", name: NSManagedObjectContextDidSaveNotification, object: nil)
+		super.init()
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "contextDidSaveChanges:", name: NSManagedObjectContextDidSaveNotification, object: nil)
 	}
 	
 	func runClosureInContextQueue(closure: (moc: NSManagedObjectContext) -> ()) {
@@ -36,7 +37,7 @@ class Store {
 		}
 	}
 	
-	func willMergeContextChanges(note: NSNotification) {
+	func contextDidSaveChanges(note: NSNotification) {
 		var moc = note.object as NSManagedObjectContext
 		
 		if moc == self.privateContext {
