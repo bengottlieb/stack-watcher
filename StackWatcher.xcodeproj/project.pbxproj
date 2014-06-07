@@ -412,7 +412,7 @@
 			};
 			name = Debug;
 		};
-		B5AB21AA193F6A4A00F49BC7 /* Release */ = {
+		B5AB21AA193F6A4A00F49BC7 /* Ad-Hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -446,7 +446,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = "Ad-Hoc";
 		};
 		B5AB21AC193F6A4A00F49BC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -458,24 +458,27 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "57E796EF-A507-47F0-8C95-A32D88EA2C27";
 				SWIFT_OBJC_BRIDGING_HEADER = "StackWatcher-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		B5AB21AD193F6A4A00F49BC7 /* Release */ = {
+		B5AB21AD193F6A4A00F49BC7 /* Ad-Hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Stand Alone, Inc. (YY6CWUX533)";
 				INFOPLIST_FILE = StackWatcher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "57E796EF-A507-47F0-8C95-A32D88EA2C27";
 				SWIFT_OBJC_BRIDGING_HEADER = "StackWatcher-Bridging-Header.h";
 			};
-			name = Release;
+			name = "Ad-Hoc";
 		};
 		B5AB21AF193F6A4A00F49BC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -497,7 +500,7 @@
 			};
 			name = Debug;
 		};
-		B5AB21B0193F6A4A00F49BC7 /* Release */ = {
+		B5AB21B0193F6A4A00F49BC7 /* Ad-Hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StackWatcher.app/StackWatcher";
@@ -511,7 +514,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
-			name = Release;
+			name = "Ad-Hoc";
 		};
 /* End XCBuildConfiguration section */
 
@@ -520,28 +523,28 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B5AB21A9193F6A4A00F49BC7 /* Debug */,
-				B5AB21AA193F6A4A00F49BC7 /* Release */,
+				B5AB21AA193F6A4A00F49BC7 /* Ad-Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Ad-Hoc";
 		};
 		B5AB21AB193F6A4A00F49BC7 /* Build configuration list for PBXNativeTarget "StackWatcher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B5AB21AC193F6A4A00F49BC7 /* Debug */,
-				B5AB21AD193F6A4A00F49BC7 /* Release */,
+				B5AB21AD193F6A4A00F49BC7 /* Ad-Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Ad-Hoc";
 		};
 		B5AB21AE193F6A4A00F49BC7 /* Build configuration list for PBXNativeTarget "StackWatcherTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B5AB21AF193F6A4A00F49BC7 /* Debug */,
-				B5AB21B0193F6A4A00F49BC7 /* Release */,
+				B5AB21B0193F6A4A00F49BC7 /* Ad-Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Ad-Hoc";
 		};
 /* End XCConfigurationList section */
 
