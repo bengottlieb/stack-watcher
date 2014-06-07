@@ -18,9 +18,9 @@ class Store {
 		let model = NSManagedObjectModel(contentsOfURL: NSBundle.mainBundle().URLForResource("Model", withExtension: "momd"))
 		var coordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
 		var options = [ NSMigratePersistentStoresAutomaticallyOption: true, NSInferMappingModelAutomaticallyOption: true ]
-		var error: NSErrorPointer = nil
+		var error: NSError?
 		
-		coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: options, error: error)
+		coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: options, error: &error)
 		
 		privateContext = NSManagedObjectContext(concurrencyType: NSManagedObjectContextConcurrencyType.PrivateQueueConcurrencyType)
 		privateContext.persistentStoreCoordinator = coordinator

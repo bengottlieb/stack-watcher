@@ -94,20 +94,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B505C7AE1942A18D00390F27 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B58610C5194115A40001A639 /* MainController.swift */,
+				B5BB6F68193FC61B0011AD08 /* Questions Table */,
+				B5BB6F6D193FC6A70011AD08 /* Question Details */,
+				B5BB6F60193FA0AC0011AD08 /* Authorization Controller */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B505C7AF1942A19E00390F27 /* ObjC Code */ = {
+			isa = PBXGroup;
+			children = (
+				B5FBC76B1940E066009C5540 /* StringFilter.h */,
+				B5FBC76C1940E066009C5540 /* StringFilter.m */,
+			);
+			name = "ObjC Code";
+			sourceTree = "<group>";
+		};
+		B505C7B01942A1A800390F27 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B58610C7194126570001A639 /* TagBubbleView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		B5AB2188193F6A4A00F49BC7 = {
 			isa = PBXGroup;
 			children = (
 				B5BB6F5F193F94B40011AD08 /* MyPlayground.playground */,
 				B5DA3722194078CA009C97AD /* AlertManager.swift */,
-				B58610C5194115A40001A639 /* MainController.swift */,
-				B5F6607C19422E9000D27266 /* Model */,
-				B58610C7194126570001A639 /* TagBubbleView.swift */,
 				B5AB21B1193F6A5C00F49BC7 /* StackWatcher.swift */,
-				B5FBC76B1940E066009C5540 /* StringFilter.h */,
-				B5FBC76C1940E066009C5540 /* StringFilter.m */,
-				B5BB6F68193FC61B0011AD08 /* Questions Table */,
-				B5BB6F6D193FC6A70011AD08 /* Question Details */,
-				B5BB6F60193FA0AC0011AD08 /* Authorization Controller */,
+				B505C7AE1942A18D00390F27 /* Controllers */,
+				B5F6607C19422E9000D27266 /* Model */,
+				B505C7B01942A1A800390F27 /* Views */,
+				B505C7AF1942A19E00390F27 /* ObjC Code */,
 				B5AB2193193F6A4A00F49BC7 /* StackWatcher */,
 				B5AB21A4193F6A4A00F49BC7 /* StackWatcherTests */,
 				B5AB2192193F6A4A00F49BC7 /* Products */,
