@@ -95,10 +95,6 @@ class StackInterface {
 		
 		var url = self.unanswerURLForTag(tag, from: date)
 		var task = self.generateSession().dataTaskWithURL(url, completionHandler: {(data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
-			self.lastCheckDate = NSDate()
-			NSUserDefaults.standardUserDefaults().setObject(self.lastCheckDate, forKey: self.lastCheckedDateKey)
-			NSUserDefaults.standardUserDefaults().synchronize()
-			
 			Store.DefaultStore.runClosureInContextQueue({ (moc: NSManagedObjectContext) -> () in
 				var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
 				
@@ -114,7 +110,6 @@ class StackInterface {
 				var	questions = PostedQuestion[]()
 				
 				for item in dict["items"]? as NSDictionary[] {
-					println("Item: \(item)")
 					var question = PostedQuestion.questionFromDictionary(item, inContext: moc)
 					questions.append(question)
 				}
@@ -124,6 +119,10 @@ class StackInterface {
 				}
 				var note = NSNotification(name: self.questionsAvailableNotificationName, object: nil)
 				
+				self.lastCheckDate = NSDate()
+				NSUserDefaults.standardUserDefaults().setObject(self.lastCheckDate, forKey: self.lastCheckedDateKey)
+				NSUserDefaults.standardUserDefaults().synchronize()
+
 				completion(error:  nil)
 			})
 		})
