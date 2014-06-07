@@ -10,7 +10,7 @@ import UIKit
 
 class MainController: UISplitViewController, UISplitViewControllerDelegate {
 	var detailController = QuestionDetailsViewController()
-	var masterController = QuestionListTableViewController()
+	var masterController = QuestionListTableViewController(nibName: nil, bundle: nil)
 	
 	init() {
 		super.init(nibName: nil, bundle: nil)

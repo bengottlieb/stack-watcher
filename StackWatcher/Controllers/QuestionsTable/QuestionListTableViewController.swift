@@ -13,22 +13,20 @@ class QuestionListTableViewController: UITableViewController {
 	var questions: PostedQuestion[]
 	var searchTag = "swift-language"
 	
-    init() {
-		questions = []
-        super.init(style: UITableViewStyle.Plain)
-		title = "Questions"
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateQuestions", name: StackInterface.DefaultInterface.didAuthenticateNotificationName, object: nil)
-		self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: "updateQuestions")
-    }
-	
 	init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
 		questions = []
 		super.init(nibName: nil, bundle: nil)
+		title = "Questions"
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateQuestions", name: StackInterface.DefaultInterface.didAuthenticateNotificationName, object: nil)
 	}
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		
+		refreshControl = UIRefreshControl()
+		refreshControl.addTarget(self, action: "updateQuestions", forControlEvents: UIControlEvents.ValueChanged)
+		self.tableView.addSubview(refreshControl)
+		
 		if self.questions.count == 0 {
 			self.updateQuestions()
 		}
@@ -43,8 +41,10 @@ class QuestionListTableViewController: UITableViewController {
 			return
 		}
 		
+		self.refreshControl.beginRefreshing()
 		StackInterface.DefaultInterface.fetchQuestionsForTag(self.searchTag, completion: {(error: NSError?) -> Void in
 				dispatch_async(dispatch_get_main_queue()) {
+					self.refreshControl.endRefreshing()
 					self.reloadQuestions()
 				}
 			})
@@ -59,24 +59,11 @@ class QuestionListTableViewController: UITableViewController {
 		self.tableView.reloadData()
 	}
 	
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    // #pragma mark - Table view data source ----------------------------------------------------------------------------------------------------------
 
-    // #pragma mark - Table view data source
+    override func numberOfSectionsInTableView(tableView: UITableView?) -> Int { return 1 }
 
-    override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 1
-    }
-
-    override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-		return self.questions.count
-    }
+    override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int { return self.questions.count }
 
 	override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
 		let cell: QuestionTableViewCell = tableView?.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as QuestionTableViewCell

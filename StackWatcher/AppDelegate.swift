@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		if UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
 			self.window!.rootViewController = MainController()
 		} else {
-			self.window!.rootViewController = UINavigationController(rootViewController: QuestionListTableViewController())
+			self.window!.rootViewController = UINavigationController(rootViewController: QuestionListTableViewController(nibName: nil, bundle: nil))
 		}
 		self.window!.makeKeyAndVisible()
 		
