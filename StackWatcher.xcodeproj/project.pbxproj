@@ -104,10 +104,10 @@
 		B5C4FFB91944808300714D27 /* StackWatcher MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StackWatcher MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C4FFBE1944808300714D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5C4FFBF1944808300714D27 /* StackWatcher_MacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackWatcher_MacTests.swift; sourceTree = "<group>"; };
-		B5C4FFCE1944814C00714D27 /* AlertManagerMac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertManagerMac.swift; path = StackWatcher/Classes/AlertManagerMac.swift; sourceTree = "<group>"; };
+		B5C4FFCE1944814C00714D27 /* AlertManagerMac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertManagerMac.swift; path = ../StackWatcher/Classes/AlertManagerMac.swift; sourceTree = "<group>"; };
 		B5DA371D194077EB009C97AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B5DA371F194077EF009C97AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		B5DA3722194078CA009C97AD /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertManager.swift; path = StackWatcher/Classes/AlertManager.swift; sourceTree = "<group>"; };
+		B5DA3722194078CA009C97AD /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertManager.swift; path = Classes/AlertManager.swift; sourceTree = "<group>"; };
 		B5F6607A19422E8600D27266 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		B5F6607D1942319E00D27266 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Store.swift; path = StackWatcher/Model/Store.swift; sourceTree = "<group>"; };
 		B5FBC76A1940E065009C5540 /* StackWatcher-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StackWatcher-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
@@ -150,7 +150,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B505C7AE1942A18D00390F27 /* Controllers */ = {
+		B505C7AE1942A18D00390F27 /* iOS Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				B58610C5194115A40001A639 /* MainController.swift */,
@@ -158,7 +158,7 @@
 				B5BB6F6D193FC6A70011AD08 /* Question Details */,
 				B5BB6F60193FA0AC0011AD08 /* Authorization Controller */,
 			);
-			name = Controllers;
+			name = "iOS Controllers";
 			sourceTree = "<group>";
 		};
 		B505C7AF1942A19E00390F27 /* ObjC Code */ = {
@@ -183,15 +183,13 @@
 			children = (
 				B5BB6F5F193F94B40011AD08 /* MyPlayground.playground */,
 				B5AB21B1193F6A5C00F49BC7 /* StackWatcher.swift */,
-				B5DA3722194078CA009C97AD /* AlertManager.swift */,
-				B5C4FFCE1944814C00714D27 /* AlertManagerMac.swift */,
-				B505C7AE1942A18D00390F27 /* Controllers */,
+				B505C7AE1942A18D00390F27 /* iOS Controllers */,
 				B5F6607C19422E9000D27266 /* Model */,
 				B505C7B01942A1A800390F27 /* Views */,
 				B505C7AF1942A19E00390F27 /* ObjC Code */,
-				B5AB2193193F6A4A00F49BC7 /* StackWatcher */,
+				B5C4FFA91944808300714D27 /* Mac Code */,
+				B5AB2193193F6A4A00F49BC7 /* iOS Code */,
 				B5AB21A4193F6A4A00F49BC7 /* StackWatcherTests */,
-				B5C4FFA91944808300714D27 /* StackWatcher Mac */,
 				B5C4FFBC1944808300714D27 /* StackWatcher MacTests */,
 				B5AB2192193F6A4A00F49BC7 /* Products */,
 				B5DA372119407807009C97AD /* iOS 7 Frameworks */,
@@ -209,15 +207,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B5AB2193193F6A4A00F49BC7 /* StackWatcher */ = {
+		B5AB2193193F6A4A00F49BC7 /* iOS Code */ = {
 			isa = PBXGroup;
 			children = (
+				B5DA3722194078CA009C97AD /* AlertManager.swift */,
 				B5FBC76A1940E065009C5540 /* StackWatcher-Bridging-Header.h */,
 				B5AB2196193F6A4A00F49BC7 /* AppDelegate.swift */,
 				B5AB219B193F6A4A00F49BC7 /* Images.xcassets */,
 				B5AB2198193F6A4A00F49BC7 /* StackWatcher.xcdatamodeld */,
 				B5AB2194193F6A4A00F49BC7 /* Supporting Files */,
 			);
+			name = "iOS Code";
 			path = StackWatcher;
 			sourceTree = "<group>";
 		};
@@ -274,14 +274,16 @@
 			name = "Question Details";
 			sourceTree = "<group>";
 		};
-		B5C4FFA91944808300714D27 /* StackWatcher Mac */ = {
+		B5C4FFA91944808300714D27 /* Mac Code */ = {
 			isa = PBXGroup;
 			children = (
+				B5C4FFCE1944814C00714D27 /* AlertManagerMac.swift */,
 				B5C4FFAE1944808300714D27 /* AppDelegate.swift */,
 				B5C4FFB01944808300714D27 /* Images.xcassets */,
 				B5C4FFB21944808300714D27 /* MainMenu.xib */,
 				B5C4FFAA1944808300714D27 /* Supporting Files */,
 			);
+			name = "Mac Code";
 			path = "StackWatcher Mac";
 			sourceTree = "<group>";
 		};

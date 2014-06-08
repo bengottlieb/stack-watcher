@@ -18,5 +18,6 @@ class AlertManager : NSObject {
 	}
 	
 	func showAlertTitled(title: NSString, message: NSString, buttonTitles: String[], completion: (buttonIndex: Int) -> () = {(buttonIndex: Int) -> () in }) {
+		
 	}
 }
