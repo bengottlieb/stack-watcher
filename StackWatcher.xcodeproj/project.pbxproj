@@ -23,6 +23,17 @@
 		B5BB6F65193FB3E30011AD08 /* PostedQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6F64193FB3E30011AD08 /* PostedQuestion.swift */; };
 		B5BB6F6B193FC6800011AD08 /* QuestionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6F69193FC6800011AD08 /* QuestionDetailsViewController.swift */; };
 		B5BB6F6C193FC6800011AD08 /* QuestionDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5BB6F6A193FC6800011AD08 /* QuestionDetailsViewController.xib */; };
+		B5C4FFAD1944808300714D27 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4FFAC1944808300714D27 /* main.swift */; };
+		B5C4FFAF1944808300714D27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4FFAE1944808300714D27 /* AppDelegate.swift */; };
+		B5C4FFB11944808300714D27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5C4FFB01944808300714D27 /* Images.xcassets */; };
+		B5C4FFB41944808300714D27 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5C4FFB21944808300714D27 /* MainMenu.xib */; };
+		B5C4FFC01944808300714D27 /* StackWatcher_MacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4FFBF1944808300714D27 /* StackWatcher_MacTests.swift */; };
+		B5C4FFC7194480AF00714D27 /* StackWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AB21B1193F6A5C00F49BC7 /* StackWatcher.swift */; };
+		B5C4FFCA194480D000714D27 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5F6607919422E8600D27266 /* Model.xcdatamodeld */; };
+		B5C4FFCB194480D400714D27 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6607D1942319E00D27266 /* Store.swift */; };
+		B5C4FFCC194480D900714D27 /* PostedQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6F64193FB3E30011AD08 /* PostedQuestion.swift */; };
+		B5C4FFCD1944810000714D27 /* StringFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC76C1940E066009C5540 /* StringFilter.m */; };
+		B5C4FFD01944818A00714D27 /* AlertManagerMac.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4FFCE1944814C00714D27 /* AlertManagerMac.swift */; };
 		B5DA371E194077EB009C97AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DA371D194077EB009C97AD /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B5DA3720194077EF009C97AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DA371F194077EF009C97AD /* Foundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B5DA3723194078CA009C97AD /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DA3722194078CA009C97AD /* AlertManager.swift */; };
@@ -45,6 +56,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = B5AB2190193F6A4A00F49BC7;
 			remoteInfo = StackWatcher;
+		};
+		B5C4FFA21944800200714D27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5AB2189193F6A4A00F49BC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5AB2190193F6A4A00F49BC7;
+			remoteInfo = StackWatcher;
+		};
+		B5C4FFBA1944808300714D27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5AB2189193F6A4A00F49BC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5C4FFA71944808300714D27;
+			remoteInfo = "StackWatcher Mac";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -70,6 +95,16 @@
 		B5BB6F64193FB3E30011AD08 /* PostedQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostedQuestion.swift; path = StackWatcher/Classes/PostedQuestion.swift; sourceTree = "<group>"; };
 		B5BB6F69193FC6800011AD08 /* QuestionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionDetailsViewController.swift; path = "StackWatcher/Controllers/Question Details/QuestionDetailsViewController.swift"; sourceTree = "<group>"; };
 		B5BB6F6A193FC6800011AD08 /* QuestionDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionDetailsViewController.xib; path = "StackWatcher/Controllers/Question Details/QuestionDetailsViewController.xib"; sourceTree = "<group>"; };
+		B5C4FFA81944808300714D27 /* StackWatcher Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StackWatcher Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5C4FFAB1944808300714D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5C4FFAC1944808300714D27 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B5C4FFAE1944808300714D27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B5C4FFB01944808300714D27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B5C4FFB31944808300714D27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B5C4FFB91944808300714D27 /* StackWatcher MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StackWatcher MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5C4FFBE1944808300714D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5C4FFBF1944808300714D27 /* StackWatcher_MacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackWatcher_MacTests.swift; sourceTree = "<group>"; };
+		B5C4FFCE1944814C00714D27 /* AlertManagerMac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertManagerMac.swift; path = StackWatcher/Classes/AlertManagerMac.swift; sourceTree = "<group>"; };
 		B5DA371D194077EB009C97AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B5DA371F194077EF009C97AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B5DA3722194078CA009C97AD /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertManager.swift; path = StackWatcher/Classes/AlertManager.swift; sourceTree = "<group>"; };
@@ -92,6 +127,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B5AB219E193F6A4A00F49BC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5C4FFA51944808300714D27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5C4FFB61944808300714D27 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -133,14 +182,17 @@
 			isa = PBXGroup;
 			children = (
 				B5BB6F5F193F94B40011AD08 /* MyPlayground.playground */,
-				B5DA3722194078CA009C97AD /* AlertManager.swift */,
 				B5AB21B1193F6A5C00F49BC7 /* StackWatcher.swift */,
+				B5DA3722194078CA009C97AD /* AlertManager.swift */,
+				B5C4FFCE1944814C00714D27 /* AlertManagerMac.swift */,
 				B505C7AE1942A18D00390F27 /* Controllers */,
 				B5F6607C19422E9000D27266 /* Model */,
 				B505C7B01942A1A800390F27 /* Views */,
 				B505C7AF1942A19E00390F27 /* ObjC Code */,
 				B5AB2193193F6A4A00F49BC7 /* StackWatcher */,
 				B5AB21A4193F6A4A00F49BC7 /* StackWatcherTests */,
+				B5C4FFA91944808300714D27 /* StackWatcher Mac */,
+				B5C4FFBC1944808300714D27 /* StackWatcher MacTests */,
 				B5AB2192193F6A4A00F49BC7 /* Products */,
 				B5DA372119407807009C97AD /* iOS 7 Frameworks */,
 			);
@@ -151,6 +203,8 @@
 			children = (
 				B5AB2191193F6A4A00F49BC7 /* StackWatcher.app */,
 				B5AB21A1193F6A4A00F49BC7 /* StackWatcherTests.xctest */,
+				B5C4FFA81944808300714D27 /* StackWatcher Mac.app */,
+				B5C4FFB91944808300714D27 /* StackWatcher MacTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,6 +274,43 @@
 			name = "Question Details";
 			sourceTree = "<group>";
 		};
+		B5C4FFA91944808300714D27 /* StackWatcher Mac */ = {
+			isa = PBXGroup;
+			children = (
+				B5C4FFAE1944808300714D27 /* AppDelegate.swift */,
+				B5C4FFB01944808300714D27 /* Images.xcassets */,
+				B5C4FFB21944808300714D27 /* MainMenu.xib */,
+				B5C4FFAA1944808300714D27 /* Supporting Files */,
+			);
+			path = "StackWatcher Mac";
+			sourceTree = "<group>";
+		};
+		B5C4FFAA1944808300714D27 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5C4FFAB1944808300714D27 /* Info.plist */,
+				B5C4FFAC1944808300714D27 /* main.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5C4FFBC1944808300714D27 /* StackWatcher MacTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5C4FFBF1944808300714D27 /* StackWatcher_MacTests.swift */,
+				B5C4FFBD1944808300714D27 /* Supporting Files */,
+			);
+			path = "StackWatcher MacTests";
+			sourceTree = "<group>";
+		};
+		B5C4FFBD1944808300714D27 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5C4FFBE1944808300714D27 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		B5DA372119407807009C97AD /* iOS 7 Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,9 +334,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B5AB2190193F6A4A00F49BC7 /* StackWatcher */ = {
+		B5AB2190193F6A4A00F49BC7 /* StackWatcher iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B5AB21AB193F6A4A00F49BC7 /* Build configuration list for PBXNativeTarget "StackWatcher" */;
+			buildConfigurationList = B5AB21AB193F6A4A00F49BC7 /* Build configuration list for PBXNativeTarget "StackWatcher iOS" */;
 			buildPhases = (
 				B5AB218D193F6A4A00F49BC7 /* Sources */,
 				B5AB218E193F6A4A00F49BC7 /* Frameworks */,
@@ -255,7 +346,7 @@
 			);
 			dependencies = (
 			);
-			name = StackWatcher;
+			name = "StackWatcher iOS";
 			productName = StackWatcher;
 			productReference = B5AB2191193F6A4A00F49BC7 /* StackWatcher.app */;
 			productType = "com.apple.product-type.application";
@@ -273,10 +364,46 @@
 			dependencies = (
 				B5AB21A3193F6A4A00F49BC7 /* PBXTargetDependency */,
 				B5C4FFA11944800200714D27 /* PBXTargetDependency */,
+				B5C4FFA31944800200714D27 /* PBXTargetDependency */,
 			);
 			name = StackWatcherTests;
 			productName = StackWatcherTests;
 			productReference = B5AB21A1193F6A4A00F49BC7 /* StackWatcherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B5C4FFA71944808300714D27 /* StackWatcher Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5C4FFC11944808300714D27 /* Build configuration list for PBXNativeTarget "StackWatcher Mac" */;
+			buildPhases = (
+				B5C4FFA41944808300714D27 /* Sources */,
+				B5C4FFA51944808300714D27 /* Frameworks */,
+				B5C4FFA61944808300714D27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StackWatcher Mac";
+			productName = "StackWatcher Mac";
+			productReference = B5C4FFA81944808300714D27 /* StackWatcher Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B5C4FFB81944808300714D27 /* StackWatcher MacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5C4FFC41944808300714D27 /* Build configuration list for PBXNativeTarget "StackWatcher MacTests" */;
+			buildPhases = (
+				B5C4FFB51944808300714D27 /* Sources */,
+				B5C4FFB61944808300714D27 /* Frameworks */,
+				B5C4FFB71944808300714D27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5C4FFBB1944808300714D27 /* PBXTargetDependency */,
+			);
+			name = "StackWatcher MacTests";
+			productName = "StackWatcher MacTests";
+			productReference = B5C4FFB91944808300714D27 /* StackWatcher MacTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -295,6 +422,13 @@
 						CreatedOnToolsVersion = 6.0;
 						TestTargetID = B5AB2190193F6A4A00F49BC7;
 					};
+					B5C4FFA71944808300714D27 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					B5C4FFB81944808300714D27 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = B5C4FFA71944808300714D27;
+					};
 				};
 			};
 			buildConfigurationList = B5AB218C193F6A4A00F49BC7 /* Build configuration list for PBXProject "StackWatcher" */;
@@ -303,14 +437,17 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = B5AB2188193F6A4A00F49BC7;
 			productRefGroup = B5AB2192193F6A4A00F49BC7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B5AB2190193F6A4A00F49BC7 /* StackWatcher */,
+				B5AB2190193F6A4A00F49BC7 /* StackWatcher iOS */,
 				B5AB21A0193F6A4A00F49BC7 /* StackWatcherTests */,
+				B5C4FFA71944808300714D27 /* StackWatcher Mac */,
+				B5C4FFB81944808300714D27 /* StackWatcher MacTests */,
 			);
 		};
 /* End PBXProject section */
@@ -328,6 +465,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B5AB219F193F6A4A00F49BC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5C4FFA61944808300714D27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5C4FFB11944808300714D27 /* Images.xcassets in Resources */,
+				B5C4FFB41944808300714D27 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5C4FFB71944808300714D27 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -366,20 +519,64 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5C4FFA41944808300714D27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5C4FFCB194480D400714D27 /* Store.swift in Sources */,
+				B5C4FFCD1944810000714D27 /* StringFilter.m in Sources */,
+				B5C4FFC7194480AF00714D27 /* StackWatcher.swift in Sources */,
+				B5C4FFAF1944808300714D27 /* AppDelegate.swift in Sources */,
+				B5C4FFD01944818A00714D27 /* AlertManagerMac.swift in Sources */,
+				B5C4FFAD1944808300714D27 /* main.swift in Sources */,
+				B5C4FFCC194480D900714D27 /* PostedQuestion.swift in Sources */,
+				B5C4FFCA194480D000714D27 /* Model.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5C4FFB51944808300714D27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5C4FFC01944808300714D27 /* StackWatcher_MacTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		B5AB21A3193F6A4A00F49BC7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B5AB2190193F6A4A00F49BC7 /* StackWatcher */;
+			target = B5AB2190193F6A4A00F49BC7 /* StackWatcher iOS */;
 			targetProxy = B5AB21A2193F6A4A00F49BC7 /* PBXContainerItemProxy */;
 		};
 		B5C4FFA11944800200714D27 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B5AB2190193F6A4A00F49BC7 /* StackWatcher */;
+			target = B5AB2190193F6A4A00F49BC7 /* StackWatcher iOS */;
 			targetProxy = B5C4FFA01944800200714D27 /* PBXContainerItemProxy */;
 		};
+		B5C4FFA31944800200714D27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5AB2190193F6A4A00F49BC7 /* StackWatcher iOS */;
+			targetProxy = B5C4FFA21944800200714D27 /* PBXContainerItemProxy */;
+		};
+		B5C4FFBB1944808300714D27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5C4FFA71944808300714D27 /* StackWatcher Mac */;
+			targetProxy = B5C4FFBA1944808300714D27 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B5C4FFB21944808300714D27 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5C4FFB31944808300714D27 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B5AB21A9193F6A4A00F49BC7 /* Debug */ = {
@@ -470,7 +667,7 @@
 				INFOPLIST_FILE = StackWatcher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = StackWatcher;
 				PROVISIONING_PROFILE = "57E796EF-A507-47F0-8C95-A32D88EA2C27";
 				SWIFT_OBJC_BRIDGING_HEADER = "StackWatcher-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -487,7 +684,7 @@
 				INFOPLIST_FILE = StackWatcher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = StackWatcher;
 				PROVISIONING_PROFILE = "57E796EF-A507-47F0-8C95-A32D88EA2C27";
 				SWIFT_OBJC_BRIDGING_HEADER = "StackWatcher-Bridging-Header.h";
 			};
@@ -529,6 +726,134 @@
 			};
 			name = "Ad-Hoc";
 		};
+		B5C4FFC21944808300714D27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "StackWatcher Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "StackWatcher-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		B5C4FFC31944808300714D27 /* Ad-Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "StackWatcher Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "StackWatcher-Bridging-Header.h";
+			};
+			name = "Ad-Hoc";
+		};
+		B5C4FFC51944808300714D27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StackWatcher Mac.app/Contents/MacOS/StackWatcher Mac";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "StackWatcher MacTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		B5C4FFC61944808300714D27 /* Ad-Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StackWatcher Mac.app/Contents/MacOS/StackWatcher Mac";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "StackWatcher MacTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = "Ad-Hoc";
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -541,7 +866,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Ad-Hoc";
 		};
-		B5AB21AB193F6A4A00F49BC7 /* Build configuration list for PBXNativeTarget "StackWatcher" */ = {
+		B5AB21AB193F6A4A00F49BC7 /* Build configuration list for PBXNativeTarget "StackWatcher iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B5AB21AC193F6A4A00F49BC7 /* Debug */,
@@ -558,6 +883,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Ad-Hoc";
+		};
+		B5C4FFC11944808300714D27 /* Build configuration list for PBXNativeTarget "StackWatcher Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5C4FFC21944808300714D27 /* Debug */,
+				B5C4FFC31944808300714D27 /* Ad-Hoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B5C4FFC41944808300714D27 /* Build configuration list for PBXNativeTarget "StackWatcher MacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5C4FFC51944808300714D27 /* Debug */,
+				B5C4FFC61944808300714D27 /* Ad-Hoc */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 

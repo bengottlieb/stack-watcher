@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Stand Alone, Inc. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import CoreData
 
 class PostedQuestion : NSManagedObject {
