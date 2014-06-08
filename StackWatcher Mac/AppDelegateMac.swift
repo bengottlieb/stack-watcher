@@ -11,9 +11,13 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
                             
 	@IBOutlet var window: NSWindow
-
+	
+	var authController: AuthorizationController?
 
 	func applicationDidFinishLaunching(aNotification: NSNotification?) {
+		authController = AuthorizationController.controllerToPresentURL(StackInterface.DefaultInterface.authorizationURL)
+		
+		
 		// Insert code here to initialize your application
 	}
 

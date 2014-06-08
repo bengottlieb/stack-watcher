@@ -24,7 +24,7 @@
 		B5BB6F6B193FC6800011AD08 /* QuestionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6F69193FC6800011AD08 /* QuestionDetailsViewController.swift */; };
 		B5BB6F6C193FC6800011AD08 /* QuestionDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5BB6F6A193FC6800011AD08 /* QuestionDetailsViewController.xib */; };
 		B5C4FFAD1944808300714D27 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4FFAC1944808300714D27 /* main.swift */; };
-		B5C4FFAF1944808300714D27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4FFAE1944808300714D27 /* AppDelegate.swift */; };
+		B5C4FFAF1944808300714D27 /* AppDelegateMac.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4FFAE1944808300714D27 /* AppDelegateMac.swift */; };
 		B5C4FFB11944808300714D27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5C4FFB01944808300714D27 /* Images.xcassets */; };
 		B5C4FFB41944808300714D27 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5C4FFB21944808300714D27 /* MainMenu.xib */; };
 		B5C4FFC01944808300714D27 /* StackWatcher_MacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4FFBF1944808300714D27 /* StackWatcher_MacTests.swift */; };
@@ -34,6 +34,8 @@
 		B5C4FFCC194480D900714D27 /* PostedQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6F64193FB3E30011AD08 /* PostedQuestion.swift */; };
 		B5C4FFCD1944810000714D27 /* StringFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FBC76C1940E066009C5540 /* StringFilter.m */; };
 		B5C4FFD01944818A00714D27 /* AlertManagerMac.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4FFCE1944814C00714D27 /* AlertManagerMac.swift */; };
+		B5C4FFD3194490F000714D27 /* AuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4FFD1194490F000714D27 /* AuthorizationController.swift */; };
+		B5C4FFD4194490F000714D27 /* AuthorizationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5C4FFD2194490F000714D27 /* AuthorizationController.xib */; };
 		B5DA371E194077EB009C97AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DA371D194077EB009C97AD /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B5DA3720194077EF009C97AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DA371F194077EF009C97AD /* Foundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B5DA3723194078CA009C97AD /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DA3722194078CA009C97AD /* AlertManager.swift */; };
@@ -98,13 +100,16 @@
 		B5C4FFA81944808300714D27 /* StackWatcher Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StackWatcher Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C4FFAB1944808300714D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5C4FFAC1944808300714D27 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		B5C4FFAE1944808300714D27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B5C4FFAE1944808300714D27 /* AppDelegateMac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateMac.swift; sourceTree = "<group>"; };
 		B5C4FFB01944808300714D27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B5C4FFB31944808300714D27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B5C4FFB91944808300714D27 /* StackWatcher MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StackWatcher MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C4FFBE1944808300714D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5C4FFBF1944808300714D27 /* StackWatcher_MacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackWatcher_MacTests.swift; sourceTree = "<group>"; };
 		B5C4FFCE1944814C00714D27 /* AlertManagerMac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertManagerMac.swift; path = ../StackWatcher/Classes/AlertManagerMac.swift; sourceTree = "<group>"; };
+		B5C4FFD1194490F000714D27 /* AuthorizationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthorizationController.swift; path = Controllers/Authorization/AuthorizationController.swift; sourceTree = "<group>"; };
+		B5C4FFD2194490F000714D27 /* AuthorizationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AuthorizationController.xib; path = Controllers/Authorization/AuthorizationController.xib; sourceTree = "<group>"; };
+		B5C4FFD51944A96500714D27 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
 		B5DA371D194077EB009C97AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B5DA371F194077EF009C97AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B5DA3722194078CA009C97AD /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertManager.swift; path = Classes/AlertManager.swift; sourceTree = "<group>"; };
@@ -181,6 +186,7 @@
 		B5AB2188193F6A4A00F49BC7 = {
 			isa = PBXGroup;
 			children = (
+				B5C4FFD51944A96500714D27 /* WebKit.framework */,
 				B5BB6F5F193F94B40011AD08 /* MyPlayground.playground */,
 				B5AB21B1193F6A5C00F49BC7 /* StackWatcher.swift */,
 				B505C7AE1942A18D00390F27 /* iOS Controllers */,
@@ -278,9 +284,11 @@
 			isa = PBXGroup;
 			children = (
 				B5C4FFCE1944814C00714D27 /* AlertManagerMac.swift */,
-				B5C4FFAE1944808300714D27 /* AppDelegate.swift */,
+				B5C4FFAE1944808300714D27 /* AppDelegateMac.swift */,
 				B5C4FFB01944808300714D27 /* Images.xcassets */,
 				B5C4FFB21944808300714D27 /* MainMenu.xib */,
+				B5C4FFD1194490F000714D27 /* AuthorizationController.swift */,
+				B5C4FFD2194490F000714D27 /* AuthorizationController.xib */,
 				B5C4FFAA1944808300714D27 /* Supporting Files */,
 			);
 			name = "Mac Code";
@@ -477,6 +485,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C4FFD4194490F000714D27 /* AuthorizationController.xib in Resources */,
 				B5C4FFB11944808300714D27 /* Images.xcassets in Resources */,
 				B5C4FFB41944808300714D27 /* MainMenu.xib in Resources */,
 			);
@@ -525,10 +534,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C4FFD3194490F000714D27 /* AuthorizationController.swift in Sources */,
 				B5C4FFCB194480D400714D27 /* Store.swift in Sources */,
 				B5C4FFCD1944810000714D27 /* StringFilter.m in Sources */,
 				B5C4FFC7194480AF00714D27 /* StackWatcher.swift in Sources */,
-				B5C4FFAF1944808300714D27 /* AppDelegate.swift in Sources */,
+				B5C4FFAF1944808300714D27 /* AppDelegateMac.swift in Sources */,
 				B5C4FFD01944818A00714D27 /* AlertManagerMac.swift in Sources */,
 				B5C4FFAD1944808300714D27 /* main.swift in Sources */,
 				B5C4FFCC194480D900714D27 /* PostedQuestion.swift in Sources */,
