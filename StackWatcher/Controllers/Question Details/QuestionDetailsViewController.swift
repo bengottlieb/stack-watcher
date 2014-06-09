@@ -16,7 +16,7 @@ class QuestionDetailsViewController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
 		
-		self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: "reload")
+		self.navigationItem.rightBarButtonItem = self.reloadButton
 		
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: "didSelectQuestion:", name: StackInterface.DefaultInterface.questionSelectedNotificationName, object: nil)
         // Custom initialization
@@ -70,6 +70,8 @@ class QuestionDetailsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+	
+	var reloadButton: UIBarButtonItem { return UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: "reload") }
 
 	@IBOutlet var webView : UIWebView
 }
