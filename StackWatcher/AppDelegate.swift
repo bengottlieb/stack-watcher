@@ -13,7 +13,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
 	var window: UIWindow?
-
+	
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
 		self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
@@ -32,6 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		self.promptForAuthorization()
 		
 		return true
+	}
+	@IBAction func reauthorize(sender : AnyObject) {
 	}
 
 	func applicationWillResignActive(application: UIApplication) {

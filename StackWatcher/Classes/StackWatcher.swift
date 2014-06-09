@@ -52,6 +52,17 @@ class StackInterface {
 	let questionSelectedNotificationName = "questionSelectedNotificationName"
 	
 	var isAuthorized : Bool { return self.authToken != "" }
+	func resetAuthorization() {
+		self.authToken = ""
+		
+		var url = NSURL.URLWithString("https://stackexchange.com")
+		var jar = NSHTTPCookieStorage.sharedHTTPCookieStorage()
+		var cookies = jar.cookiesForURL(url)
+		
+		for cookie in (cookies as NSHTTPCookie[]) {
+			jar.deleteCookie(cookie)
+		}
+	}
 	
 	var authToken : String {
 		willSet  {

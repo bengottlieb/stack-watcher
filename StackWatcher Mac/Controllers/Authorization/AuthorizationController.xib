@@ -16,15 +16,20 @@
         <window title="Authorize" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+            <rect key="contentRect" x="1003" y="814" width="602" height="434"/>
             <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
             <view key="contentView" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <rect key="frame" x="0.0" y="0.0" width="602" height="434"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <webView translatesAutoresizingMaskIntoConstraints="NO" id="37S-Sh-AFD">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
-                        <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12"/>
+                        <rect key="frame" x="0.0" y="0.0" width="602" height="434"/>
+                        <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
+                            <nil key="identifier"/>
+                        </webPreferences>
+                        <connections>
+                            <outlet property="frameLoadDelegate" destination="-2" id="xsa-CO-5HV"/>
+                        </connections>
                     </webView>
                 </subviews>
                 <constraints>
@@ -37,6 +42,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
+            <point key="canvasLocation" x="272" y="333"/>
         </window>
     </objects>
 </document>

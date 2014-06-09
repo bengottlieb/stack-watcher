@@ -287,8 +287,7 @@
 				B5C4FFAE1944808300714D27 /* AppDelegateMac.swift */,
 				B5C4FFB01944808300714D27 /* Images.xcassets */,
 				B5C4FFB21944808300714D27 /* MainMenu.xib */,
-				B5C4FFD1194490F000714D27 /* AuthorizationController.swift */,
-				B5C4FFD2194490F000714D27 /* AuthorizationController.xib */,
+				B5C4FFD71945BC3E00714D27 /* Authorization Controller Mac */,
 				B5C4FFAA1944808300714D27 /* Supporting Files */,
 			);
 			name = "Mac Code";
@@ -319,6 +318,15 @@
 				B5C4FFBE1944808300714D27 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5C4FFD71945BC3E00714D27 /* Authorization Controller Mac */ = {
+			isa = PBXGroup;
+			children = (
+				B5C4FFD1194490F000714D27 /* AuthorizationController.swift */,
+				B5C4FFD2194490F000714D27 /* AuthorizationController.xib */,
+			);
+			name = "Authorization Controller Mac";
 			sourceTree = "<group>";
 		};
 		B5DA372119407807009C97AD /* iOS 7 Frameworks */ = {

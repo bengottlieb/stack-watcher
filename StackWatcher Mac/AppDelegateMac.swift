@@ -11,13 +11,12 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
                             
 	@IBOutlet var window: NSWindow
+	@IBOutlet var reauthorizeItem: NSMenuItem
 	
 	var authController: AuthorizationController?
 
 	func applicationDidFinishLaunching(aNotification: NSNotification?) {
-		authController = AuthorizationController.controllerToPresentURL(StackInterface.DefaultInterface.authorizationURL)
-		
-		
+		self.promptForAuthorization()
 		// Insert code here to initialize your application
 	}
 
@@ -25,6 +24,27 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		// Insert code here to tear down your application
 	}
 
-
+	var showingAuthorizationPrompt = false
+	
+	@IBAction func reauthorize(sender: AnyObject?) {
+		StackInterface.DefaultInterface.resetAuthorization()
+		self.promptForAuthorization()
+	}
+	
+	override func validateMenuItem(menuItem: NSMenuItem!) -> Bool {
+		if menuItem == self.reauthorizeItem { return !self.showingAuthorizationPrompt }
+		return super.validateMenuItem(menuItem)
+	}
 }
 
+extension AppDelegate {
+	func promptForAuthorization() {
+		if self.showingAuthorizationPrompt { return }
+		
+		if (!StackInterface.DefaultInterface.isAuthorized) {
+			self.showingAuthorizationPrompt = true
+			authController = AuthorizationController.controllerToPresentURL(StackInterface.DefaultInterface.authorizationURL)
+		}
+	}
+	
+}
