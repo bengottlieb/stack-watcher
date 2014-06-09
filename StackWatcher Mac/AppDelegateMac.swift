@@ -14,17 +14,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	@IBOutlet var reauthorizeItem: NSMenuItem
 	
 	var authController: AuthorizationController?
+	var questionsList: QuestionsListController?
 
 	func applicationDidFinishLaunching(aNotification: NSNotification?) {
-		self.promptForAuthorization()
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "didAuthorize", name: StackInterface.DefaultInterface.didAuthenticateNotificationName, object: nil)
+		if !self.promptForAuthorization() { self.showQuestionsWindow() }
+		
 		// Insert code here to initialize your application
 	}
 
 	func applicationWillTerminate(aNotification: NSNotification?) {
 		// Insert code here to tear down your application
 	}
-
-	var showingAuthorizationPrompt = false
 	
 	@IBAction func reauthorize(sender: AnyObject?) {
 		StackInterface.DefaultInterface.resetAuthorization()
@@ -32,19 +33,36 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	}
 	
 	override func validateMenuItem(menuItem: NSMenuItem!) -> Bool {
-		if menuItem == self.reauthorizeItem { return !self.showingAuthorizationPrompt }
+		if menuItem == self.reauthorizeItem { return self.authController == nil }
 		return super.validateMenuItem(menuItem)
 	}
 }
 
 extension AppDelegate {
-	func promptForAuthorization() {
-		if self.showingAuthorizationPrompt { return }
-		
-		if (!StackInterface.DefaultInterface.isAuthorized) {
-			self.showingAuthorizationPrompt = true
-			authController = AuthorizationController.controllerToPresentURL(StackInterface.DefaultInterface.authorizationURL)
+	func showQuestionsWindow() {
+		if let list = self.questionsList {
+			list.window.makeKeyAndOrderFront(nil)
+		} else {
+			self.questionsList = QuestionsListController.controller()
 		}
 	}
+}
+
+extension AppDelegate {
+	func promptForAuthorization() -> Bool {
+		if (!StackInterface.DefaultInterface.isAuthorized) {
+			if let controller = self.authController {
+				controller.window.makeKeyAndOrderFront(nil)
+			} else {
+				authController = AuthorizationController.controllerToPresentURL(StackInterface.DefaultInterface.authorizationURL)
+			}
+			self.questionsList?.window.close()
+			return true
+		}
+		return false
+	}
 	
+	func didAuthorize() {
+		self.showQuestionsWindow()
+	}
 }

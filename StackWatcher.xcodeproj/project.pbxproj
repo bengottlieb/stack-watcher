@@ -10,6 +10,8 @@
 		B505C7AD19428A7D00390F27 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B505C7AC19428A7D00390F27 /* CoreData.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B527B639193FF53C004C1B4D /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527B637193FF53C004C1B4D /* QuestionTableViewCell.swift */; };
 		B527B63A193FF53C004C1B4D /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B527B638193FF53C004C1B4D /* QuestionTableViewCell.xib */; };
+		B5586D181945C6380026AFEE /* QuestionsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5586D161945C6380026AFEE /* QuestionsListController.swift */; };
+		B5586D191945C6380026AFEE /* QuestionsListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5586D171945C6380026AFEE /* QuestionsListController.xib */; };
 		B58610C6194115A40001A639 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58610C5194115A40001A639 /* MainController.swift */; };
 		B58610C8194126570001A639 /* TagBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58610C7194126570001A639 /* TagBubbleView.swift */; };
 		B5AB2197193F6A4A00F49BC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AB2196193F6A4A00F49BC7 /* AppDelegate.swift */; };
@@ -79,6 +81,8 @@
 		B505C7AC19428A7D00390F27 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B527B637193FF53C004C1B4D /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionTableViewCell.swift; path = StackWatcher/Controllers/QuestionsTable/QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		B527B638193FF53C004C1B4D /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionTableViewCell.xib; path = StackWatcher/Controllers/QuestionsTable/QuestionTableViewCell.xib; sourceTree = "<group>"; };
+		B5586D161945C6380026AFEE /* QuestionsListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionsListController.swift; path = "Controllers/Questions List/QuestionsListController.swift"; sourceTree = "<group>"; };
+		B5586D171945C6380026AFEE /* QuestionsListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionsListController.xib; path = "Controllers/Questions List/QuestionsListController.xib"; sourceTree = "<group>"; };
 		B58610C5194115A40001A639 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainController.swift; path = StackWatcher/Controllers/Main/MainController.swift; sourceTree = "<group>"; };
 		B58610C7194126570001A639 /* TagBubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagBubbleView.swift; path = StackWatcher/Views/TagBubbleView.swift; sourceTree = "<group>"; };
 		B5AB2191193F6A4A00F49BC7 /* StackWatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackWatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +187,25 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		B5586D1A1945C6890026AFEE /* Questions List */ = {
+			isa = PBXGroup;
+			children = (
+				B5586D161945C6380026AFEE /* QuestionsListController.swift */,
+				B5586D171945C6380026AFEE /* QuestionsListController.xib */,
+			);
+			name = "Questions List";
+			sourceTree = "<group>";
+		};
+		B5586D1B1945C6920026AFEE /* Mac Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B5586D1A1945C6890026AFEE /* Questions List */,
+				B5C4FFD71945BC3E00714D27 /* Authorization Controller Mac */,
+			);
+			name = "Mac Controllers";
+			path = "StackWatcher Mac";
+			sourceTree = "<group>";
+		};
 		B5AB2188193F6A4A00F49BC7 = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +213,7 @@
 				B5BB6F5F193F94B40011AD08 /* MyPlayground.playground */,
 				B5AB21B1193F6A5C00F49BC7 /* StackWatcher.swift */,
 				B505C7AE1942A18D00390F27 /* iOS Controllers */,
+				B5586D1B1945C6920026AFEE /* Mac Controllers */,
 				B5F6607C19422E9000D27266 /* Model */,
 				B505C7B01942A1A800390F27 /* Views */,
 				B505C7AF1942A19E00390F27 /* ObjC Code */,
@@ -287,7 +311,6 @@
 				B5C4FFAE1944808300714D27 /* AppDelegateMac.swift */,
 				B5C4FFB01944808300714D27 /* Images.xcassets */,
 				B5C4FFB21944808300714D27 /* MainMenu.xib */,
-				B5C4FFD71945BC3E00714D27 /* Authorization Controller Mac */,
 				B5C4FFAA1944808300714D27 /* Supporting Files */,
 			);
 			name = "Mac Code";
@@ -496,6 +519,7 @@
 				B5C4FFD4194490F000714D27 /* AuthorizationController.xib in Resources */,
 				B5C4FFB11944808300714D27 /* Images.xcassets in Resources */,
 				B5C4FFB41944808300714D27 /* MainMenu.xib in Resources */,
+				B5586D191945C6380026AFEE /* QuestionsListController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +575,7 @@
 				B5C4FFAD1944808300714D27 /* main.swift in Sources */,
 				B5C4FFCC194480D900714D27 /* PostedQuestion.swift in Sources */,
 				B5C4FFCA194480D000714D27 /* Model.xcdatamodeld in Sources */,
+				B5586D181945C6380026AFEE /* QuestionsListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -911,6 +936,7 @@
 				B5C4FFC31944808300714D27 /* Ad-Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Ad-Hoc";
 		};
 		B5C4FFC41944808300714D27 /* Build configuration list for PBXNativeTarget "StackWatcher MacTests" */ = {
 			isa = XCConfigurationList;
@@ -919,6 +945,7 @@
 				B5C4FFC61944808300714D27 /* Ad-Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Ad-Hoc";
 		};
 /* End XCConfigurationList section */
 

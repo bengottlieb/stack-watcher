@@ -49,6 +49,6 @@ class AuthorizationController: NSWindowController {
 	}
 	
 	func windowWillClose(note: NSNotification) {
-		(NSApplication.sharedApplication().delegate as AppDelegate).showingAuthorizationPrompt = false
+		(NSApplication.sharedApplication().delegate as AppDelegate).authController = nil
 	}
 }
