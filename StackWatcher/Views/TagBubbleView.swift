@@ -9,7 +9,7 @@
 import UIKit
 
 class TagBubbleView: UIScrollView {
-	var tags: String[] = [] {
+	var tags: [String] = [] {
 		didSet {
 			while self.subviews.count > 0 { self.subviews[0].removeFromSuperview() }
 			

@@ -15,7 +15,7 @@ class PostedQuestion : NSManagedObject {
 	@NSManaged var answer_count, view_count, score: NSNumber;
 	@NSManaged var question_id: NSNumber;
 	@NSManaged var last_activity_date, last_edit_date, creation_date: NSDate
-	var tags: String[]?
+	var tags: [String]?
 	
 	
 	func description() -> String{

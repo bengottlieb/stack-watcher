@@ -1,3 +1,4 @@
+
 //
 //  StackWatcher.swift
 //  StackWatcher
@@ -43,7 +44,7 @@ class StackInterface {
 	let authTokenKey = "auth-token"
 	let lastCheckedDateKey = "last-check"
 	let validationURI = "https://stackexchange.com/oauth/login_success"
-	let clientKey = ""
+	let clientKey = "ajLLBq1xNwKq7SZY3MZ0Zw(("
 	let site = "stackoverflow.com"
 	let apiVersion = "2.2"
 	
@@ -59,7 +60,7 @@ class StackInterface {
 		var jar = NSHTTPCookieStorage.sharedHTTPCookieStorage()
 		var cookies = jar.cookiesForURL(url)
 		
-		for cookie in (cookies as NSHTTPCookie[]) {
+		for cookie in (cookies as [NSHTTPCookie]) {
 			jar.deleteCookie(cookie)
 		}
 	}
@@ -118,9 +119,9 @@ class StackInterface {
 					return
 				}
 				
-				var	questions = PostedQuestion[]()
+				var	questions = [PostedQuestion]()
 				
-				for item in dict["items"]? as NSDictionary[] {
+				for item in dict["items"] as [NSDictionary] {
 					var question = PostedQuestion.questionFromDictionary(item, inContext: moc)
 					questions.append(question)
 				}

@@ -19,7 +19,7 @@ class AlertManager : NSObject, UIAlertViewDelegate {
 
 	var alertCompletionBlocks: Dictionary<Int, (buttonIndex: Int) -> ()> = [:]
 	
-	func showAlertTitled(title: NSString, message: NSString, buttonTitles: String[], completion: (buttonIndex: Int) -> () = {(buttonIndex: Int) -> () in }) {
+	func showAlertTitled(title: NSString, message: NSString, buttonTitles: [String], completion: (buttonIndex: Int) -> () = {(buttonIndex: Int) -> () in }) {
 		dispatch_async(dispatch_get_main_queue()) {
 			var alertController: AnyClass? = NSClassFromString("UIAlertController")
 			

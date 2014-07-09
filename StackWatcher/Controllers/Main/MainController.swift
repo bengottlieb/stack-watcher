@@ -57,7 +57,7 @@ class MainController: UISplitViewController, UISplitViewControllerDelegate {
 		return false
 	}
 	
-	var rightButtons: UIBarButtonItem[] {
+	var rightButtons: [UIBarButtonItem] {
 		if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation)) { return [ self.detailController.reloadButton ] }
 		return [ self.detailController.reloadButton, self.expandButton ]
 	}
